@@ -229,6 +229,7 @@ $(document).ready(function () {
                 "slow",
                 function () {
                     $(".header__menu").css("dispaly", "block");
+                    $("html, body").css("overflow", "hidden");
                 }
             );
         } else {
@@ -239,6 +240,7 @@ $(document).ready(function () {
                 "slow",
                 function () {
                     $(".header__menu").css("dispaly", "none");
+                    $("html, body").css("overflow", "auto");
                 }
             );
         }

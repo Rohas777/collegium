@@ -2264,6 +2264,7 @@ main {
   background-color: #171717;
   padding-top: 222px;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 .header__menu .container {
@@ -2386,6 +2387,7 @@ main {
 .header__slider {
   width: 1140px;
   height: fit-content;
+  padding-bottom: 100px;
 }
 
 .header__slider-wrapper {
