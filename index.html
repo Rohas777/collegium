@@ -3,10 +3,15 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./css/style.css" />
-        <script src="../js/jquery.min.js" type="module" defer></script>
-        <script src="../js/jquery-ui.min.js" type="module" defer></script>
-        <script src="../js/script.js" type="module" defer></script>
         <title>Первая городская коллегия адвокатов</title>
     </head>
     <body class="home full-screen">
@@ -34,37 +39,138 @@
                     </div>
                 </div>
             </div>
-        </header>
-        
-        <main>
-            <section class="offer">
-                <div class="offer__screen">
+            <div class="header__menu">
+                <div class="header__wrapper">
                     <div class="container">
-                        <div class="offer__bg-color"></div>
-                        <img
-                            class="offer__smoke"
-                            src="/images/mainscreen/smoke.png"
-                            alt="Smoke"
-                        />
-                        <div class="offer__slider">
-                            <div class="offer__slide">
-                                <div class="offer__content">
-                                    <div class="offer__text">
-                                        <h1>
-                                            Первая городская коллегия адвокатов
-                                            в Краснодаре
-                                        </h1>
-                                        <p class="txt">
-                                            Lorem ipsum dolor sit amet
-                                            consectetur. Eros mauris mattis
-                                            rhoncus enim aenean molestie
-                                            maecenas condimentum. Vivamus
-                                            porttitor pellentesque malesuada
-                                            facilisis.
-                                        </p>
+                        <a
+                            href="/"
+                            title="Первая городская коллегия адвокатов"
+                            class="header__logo"
+                        >
+                            <img
+                                src="/images/logo.svg"
+                                alt="Первая городская коллегия адвокатов"
+                            />
+                        </a>
+                        <div class="header__tel">
+                            <a href="tel:+7 (918) 311-31-20">+7 (918) 311-31-20</a>
+                            <a href="tel:+7 (988) 240-66-63">+7 (988) 240-66-63</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <nav class="header__nav">
+                        <a href="services.html" title="Услуги">Услуги</a>
+                        <a href="team.html" title="Наша команда">Наша команда</a>
+                        <a href="contacts.html" title="Контакты">Контакты</a>
+                        <a href="about.html" title="О компании">О компании</a>
+                        <a href="reviews.html" title="Отзывы">Отзывы</a>
+                        <a href="blog.html" title="Блог">Блог</a>
+                    </nav>
+                    <section class="header__blog">
+                        <div class="header__blog-head">
+                            <span class="subtitle subtitle_light">Блог</span>
+                            <a href="blog.html" class="btn btn_light">
+                                Смотреть все новости
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="header__container">
+                            <div class="header__slider swiper">
+                                <div class="header__slider-wrapper swiper-wrapper">
+                                    <div class="header__slide swiper-slide">
+                                        <article class="post-card">
+                                            <a
+                                                href="post.html"
+                                                class="post-card__link"
+                                                title="Как устроены семейные споры, которые решаются в суде?"
+                                            ></a>
+                                            <img
+                                                class="post-card__img"
+                                                src="/images/blog/1.png"
+                                                alt="Как устроены семейные споры, которые решаются в суде?"
+                                            />
+                                            <div class="post-card__desc">
+                                                <span class="post-card__category">Семейные споры</span>
+                                                <h3>Как устроены семейные споры, которые решаются в суде?</h3>
+                                                <span class="post-card__date">22 февраля 2024 г.</span>
+                                                <a
+                                                    href="post.html"
+                                                    title="Как устроены семейные споры, которые решаются в суде?"
+                                                    >Читать полностью</a
+                                                >
+                                            </div>
+                                        </article>
+                                        
                                     </div>
-                                    <button class="btn btn_light">
-                                        Получить консультацию
+                                    <div class="header__slide swiper-slide">
+                                        <article class="post-card">
+                                            <a
+                                                href="post.html"
+                                                class="post-card__link"
+                                                title="Как устроены семейные споры, которые решаются в суде?"
+                                            ></a>
+                                            <img
+                                                class="post-card__img"
+                                                src="/images/blog/1.png"
+                                                alt="Как устроены семейные споры, которые решаются в суде?"
+                                            />
+                                            <div class="post-card__desc">
+                                                <span class="post-card__category">Семейные споры</span>
+                                                <h3>Как устроены семейные споры, которые решаются в суде?</h3>
+                                                <span class="post-card__date">22 февраля 2024 г.</span>
+                                                <a
+                                                    href="post.html"
+                                                    title="Как устроены семейные споры, которые решаются в суде?"
+                                                    >Читать полностью</a
+                                                >
+                                            </div>
+                                        </article>
+                                        
+                                    </div>
+                                    <div class="header__slide swiper-slide">
+                                        <article class="post-card">
+                                            <a
+                                                href="post.html"
+                                                class="post-card__link"
+                                                title="Как устроены семейные споры, которые решаются в суде?"
+                                            ></a>
+                                            <img
+                                                class="post-card__img"
+                                                src="/images/blog/1.png"
+                                                alt="Как устроены семейные споры, которые решаются в суде?"
+                                            />
+                                            <div class="post-card__desc">
+                                                <span class="post-card__category">Семейные споры</span>
+                                                <h3>Как устроены семейные споры, которые решаются в суде?</h3>
+                                                <span class="post-card__date">22 февраля 2024 г.</span>
+                                                <a
+                                                    href="post.html"
+                                                    title="Как устроены семейные споры, которые решаются в суде?"
+                                                    >Читать полностью</a
+                                                >
+                                            </div>
+                                        </article>
+                                        
+                                    </div>
+                                </div>
+                                <div class="header__slider-nav slider__nav">
+                                    <a href="blog.html" class="btn btn_light">
+                                        Смотреть все новости
                                         <svg
                                             width="24"
                                             height="24"
@@ -80,22 +186,239 @@
                                                 stroke-linejoin="round"
                                             />
                                         </svg>
-                                    </button>
+                                    </a>
+                                    <div class="slider__pagination swiper-pagination">
+                                        <span class="active"></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="slider__arrows">
+                                        <div class="slider__prev swiper-button-prev">
+                                            <svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M15 18L9 12L15 6"
+                                                    stroke="#171717"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <div class="slider__next swiper-button-next">
+                                            <svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M9 18L15 12L9 6"
+                                                    stroke="#171717"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img
-                                    src="/images/mainscreen/femida.png"
-                                    alt="Первая городская коллегия адвокатов в Краснодаре"
-                                    class="offer__image"
-                                />
                             </div>
-                            <div class="offer__pagination">
-                                <span>01</span>
-                                <span>02</span>
-                                <span>03</span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </header>
+        <div class="preloader">
+            <div class="progressBar"></div>
+            <div class="numbers"></div>
+        </div>
+        
+        <main>
+            <section class="offer">
+                <div class="offer__screen">
+                    <div class="container">
+                        <div class="offer__bg-color"></div>
+                        <img
+                            class="offer__smoke"
+                            src="/images/mainscreen/smoke.png"
+                            alt="Smoke"
+                        />
+                        <div
+                            class="offer__slider swiper"
+                            data-autoplay-delay="5000"
+                        >
+                            <div class="offer__slider-wrapper swiper-wrapper">
+                                <div class="offer__slide swiper-slide">
+                                    <div class="offer__content">
+                                        <div class="offer__text">
+                                            <h1
+                                                data-aos="fade-right"
+                                                data-aos-duration="1500"
+                                            >
+                                                Первая городская коллегия
+                                                адвокатов в Краснодаре
+                                            </h1>
+                                            <p
+                                                data-aos="fade-right"
+                                                data-aos-duration="1500"
+                                                data-aos-delay="100"
+                                                class="txt"
+                                            >
+                                                Lorem ipsum dolor sit amet
+                                                consectetur. Eros mauris mattis
+                                                rhoncus enim aenean molestie
+                                                maecenas condimentum. Vivamus
+                                                porttitor pellentesque malesuada
+                                                facilisis.
+                                            </p>
+                                        </div>
+                                        <div
+                                            data-aos="fade-right"
+                                            data-aos-duration="1500"
+                                            data-aos-delay="200"
+                                            class="offer__btn"
+                                        >
+                                            <button class="btn btn_light">
+                                                Получить консультацию
+                                                <svg
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M9 18L15 12L9 6"
+                                                        stroke="#171717"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <img
+                                        data-aos="fade-left"
+                                        data-aos-duration="1500"
+                                        data-aos-easing="ease-out"
+                                        src="/images/mainscreen/femida.png"
+                                        alt="Первая городская коллегия адвокатов в Краснодаре"
+                                        class="offer__image"
+                                    />
+                                </div>
+                                <div class="offer__slide swiper-slide">
+                                    <div class="offer__content">
+                                        <div class="offer__text">
+                                            <h1>
+                                                Первая городская коллегия
+                                                адвокатов в Краснодаре
+                                            </h1>
+                                            <p class="txt">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur. Eros mauris mattis
+                                                rhoncus enim aenean molestie
+                                                maecenas condimentum. Vivamus
+                                                porttitor pellentesque malesuada
+                                                facilisis.
+                                            </p>
+                                        </div>
+                                        <div class="offer__btn">
+                                            <button class="btn btn_light">
+                                                Получить консультацию
+                                                <svg
+                                                    width="24"
+                                                    height="24"
+                                                    viewBox="0 0 24 24"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M9 18L15 12L9 6"
+                                                        stroke="#171717"
+                                                        stroke-width="2"
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                    />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <img
+                                        src="/images/mainscreen/levenokvv.png"
+                                        alt="Первая городская коллегия адвокатов в Краснодаре"
+                                        class="offer__image"
+                                    />
+                                </div>
+                                <div class="offer__slide swiper-slide">
+                                    <div class="offer__content">
+                                        <div class="offer__text">
+                                            <h1>
+                                                Первая городская коллегия
+                                                адвокатов в Краснодаре
+                                            </h1>
+                                            <p class="txt">
+                                                Lorem ipsum dolor sit amet
+                                                consectetur. Eros mauris mattis
+                                                rhoncus enim aenean molestie
+                                                maecenas condimentum. Vivamus
+                                                porttitor pellentesque malesuada
+                                                facilisis.
+                                            </p>
+                                        </div>
+                                        <button class="btn btn_light">
+                                            Получить консультацию
+                                            <svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M9 18L15 12L9 6"
+                                                    stroke="#171717"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <img
+                                        src="/images/mainscreen/femida.png"
+                                        alt="Первая городская коллегия адвокатов в Краснодаре"
+                                        class="offer__image"
+                                    />
+                                </div>
+                            </div>
+                            <div
+                                data-aos="fade-right"
+                                data-aos-duration="1500"
+                                data-aos-delay="300"
+                                class="offer__pagination swiper-pagination"
+                            >
+                                <span class="swiper-pagination-bullet-active"
+                                    >01</span
+                                >
+                                <span class="swiper-pagination-bullet">02</span>
+                                <span class="swiper-pagination-bullet">03</span>
                             </div>
                         </div>
                     </div>
-                    <div class="slideDown">
+                    <div
+                        data-aos="fade-down"
+                        data-aos-duration="1500"
+                        data-aos-delay="200"
+                        class="slideDown"
+                    >
                         <svg
                             width="39"
                             height="41"
@@ -139,9 +462,25 @@
             <section class="about">
                 <div class="container">
                     <div class="about__text">
-                        <span class="subtitle">О нас</span>
-                        <h2>Все что нужно<br />знать о коллегии</h2>
-                        <p class="txt">
+                        <span
+                            class="subtitle"
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            >О нас</span
+                        >
+                        <h2
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="50"
+                        >
+                            Все что нужно<br />знать о коллегии
+                        </h2>
+                        <p
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="txt"
+                        >
                             Lorem ipsum dolor sit amet consectetur. Elementum
                             condimentum urna sed a. Odio at id non vulputate at
                             scelerisque ornare diam. Malesuada adipiscing
@@ -152,543 +491,14 @@
                             Risus pharetra viverra eu risus magna. Vestibulum
                             est augue consectetur nisi interdum in...
                         </p>
-                        <button class="btn">
-                            Читать полностью
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="about__slider">
-                        <div class="about__wrapper">
-                            <div class="about__slide about__slide_act">
-                                <img src="/images/about/1.jpg" alt="Коллегия" />
-                            </div>
-                            <div class="about__slide"></div>
-                        </div>
-                        <div class="about__nav slider__nav">
-                            <div class="slider__pagination">
-                                <span class="active"></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="slider__arrows">
-                                <div class="slider__prev">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M15 18L9 12L15 6"
-                                            stroke="#171717"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </div>
-                                <div class="slider__next">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9 18L15 12L9 6"
-                                            stroke="#171717"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="services">
-                <div class="services__background full-bg">
-                    <img src="/images/bg/services.jpg" alt="Наша область деятельности" />
-                </div>
-                <div class="container">
-                    <div class="services__text">
-                        <span class="subtitle">Услуги</span>
-                        <h2>Наша область<br />деятельности</h2>
-                        <p class="txt">
-                            Если у вас возникли какие-либо споры или вопросы, сложности с
-                            законом или его нарушениями, и вы точно не понимаете, какие
-                            услуги вам нужны или как действовать в вашей ситуации, чтобы не
-                            усугублять и без того непонятную ситуацию, лучше обратиться к
-                            специалистам, которые обязательно помогут вам определиться со
-                            степенью из ваших вопросов, а также найти решение.
-                        </p>
-                        <button class="btn btn_light">
-                            Получить консультацию
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="services__links">
-                        <a href="#">
-                            Уголовные дела
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </a>
-                        <a href="#">
-                            Семейные споры
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </a>
-                        <a href="#">
-                            Права юридических лиц и ИП
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </a>
-                        <a href="#">
-                            Административные дела
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </a>
-                        <a href="#">
-                            Жилищные споры
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </a>
-                        <a href="#">
-                            Права потребителя
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </a>
-                        <a href="#">
-                            Договорные споры
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </a>
-                        <a href="#">
-                            Права автомобилистов
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </a>
-                        <a href="#">
-                            Гражданство и миграция
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="team">
-                <div class="container">
-                    <div class="team__text">
-                        <span class="subtitle">Команда</span>
-                        <h2>Наши<br />специалисты</h2>
-                        <p class="txt">
-                            Lorem ipsum dolor sit amet consectetur. Elementum condimentum
-                            urna sed a. Odio at id non vulputate at scelerisque ornare diam.
-                            Malesuada adipiscing gravida in mattis tortor ullamcorper
-                            elementum. Consectetur iaculis pulvinar vitae lectus. Sed enim
-                            sit semper integer. Aliquam proin sed eu aliquet sit. Arcu ut in
-                            urna consectetur turpis ultricies. Risus pharetra viverra eu
-                            risus magna. Vestibulum est augue consectetur nisi interdum
-                            in...
-                        </p>
-                        <button class="btn">
-                            Подробнее
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="team__slider">
-                        <div class="team__wrapper">
-                            <a href="#" class="team__slide team__slide_act team-card">
-                                <img
-                                    src="/images/team/1.png"
-                                    alt="Василий Васильевич Левенок"
-                                />
-                                <div class="team-card__desc">
-                                    <h4 class="title">Василий Васильевич Левенок</h4>
-                                    <p class="txt">Уголовное право</p>
-                                    <span>Подробнее</span>
-                                </div>
-                            </a>
-                            <a href="#" class="team__slide team-card">
-                                <img
-                                    src="/images/team/2.png"
-                                    alt="Людмила Владимировна Серова"
-                                />
-                                <div class="team-card__desc">
-                                    <h4 class="title">Людмила Владимировна Серова</h4>
-                                    <p class="txt">Юридическое представительство</p>
-                                    <span>Подробнее</span>
-                                </div>
-                            </a>
-                            <a href="#" class="team__slide team-card">
-                                <img
-                                    src="/images/team/3.png"
-                                    alt="Алексей Александрович Абрамов"
-                                />
-                                <div class="team-card__desc">
-                                    <h4 class="title">Алексей Александрович Абрамов</h4>
-                                    <p class="txt">Судебное представительство</p>
-                                    <span>Подробнее</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="team__nav slider__nav">
-                            <div class="slider__pagination">
-                                <span class="active"></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="slider__arrows">
-                                <div class="slider__prev">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M15 18L9 12L15 6"
-                                            stroke="#171717"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </div>
-                                <div class="slider__next">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9 18L15 12L9 6"
-                                            stroke="#171717"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="stages">
-                <div class="stages__background full-bg">
-                    <img src="/images/bg/stages.png" alt="Как мы работаем" />
-                </div>
-                <div class="container">
-                    <h2>Как мы работаем</h2>
-                    <div class="stages__grid">
-                        <div class="stages__item">
-                            <span>01</span>
-                            <div class="stages__icon">
-                                <img
-                                    src="/images/stages/icon.png"
-                                    alt="Заявка"
-                                />
-                            </div>
-                            <p class="subtitle">Заявка</p>
-                            <p class="txt">
-                                <a class="popup_link" href="#"
-                                    >Оставьте заявку</a
-                                >
-                                на сайте<br />или позвоните по телефону
-                                <a href="tel:+7 (918) 311-31-20"
-                                    >+7 (918) 311-31-20</a
-                                >
-                            </p>
-                        </div>
-                        <div class="stages__item">
-                            <span>02</span>
-                            <div class="stages__icon">
-                                <img
-                                    src="/images/stages/icon-1.png"
-                                    alt="Консультация"
-                                />
-                            </div>
-                            <p class="subtitle">Консультация</p>
-                            <p class="txt">
-                                Изучение документов и тщательная выработка<br />правовой
-                                позиции<br />(важный этап, потом изменить
-                                позицию уже не получится)
-                            </p>
-                        </div>
-                        <div class="stages__item">
-                            <span>03</span>
-                            <div class="stages__icon">
-                                <img
-                                    src="/images/stages/icon-2.png"
-                                    alt="Процессуальные документы"
-                                />
-                            </div>
-                            <p class="subtitle">Процессуальные документы</p>
-                            <p class="txt">
-                                Cоставление и подача искового заявления,
-                                апелляций и иных документов процессуального
-                                характера, необходимых<br />для разрешения дела
-                            </p>
-                        </div>
-                        <div class="stages__item">
-                            <span>04</span>
-                            <div class="stages__icon">
-                                <img
-                                    src="/images/stages/icon-3.png"
-                                    alt="Процесс"
-                                />
-                            </div>
-                            <p class="subtitle">Процесс</p>
-                            <p class="txt">
-                                Обязательное участие адвокат<br />в судебном
-                                заседании
-                            </p>
-                        </div>
-                        <div class="stages__item">
-                            <span>05</span>
-                            <div class="stages__icon">
-                                <img
-                                    src="/images/stages/icon-4.png"
-                                    alt="Результат"
-                                />
-                            </div>
-                            <p class="subtitle">Результат</p>
-                            <p class="txt">
-                                Получение судебного акта, определений<br />и
-                                постановлений суда
-                            </p>
-                        </div>
-                        <div class="stages__item">
-                            <span>06</span>
-                            <div class="stages__icon">
-                                <img
-                                    src="/images/stages/icon-5.png"
-                                    alt="Итоги"
-                                />
-                            </div>
-                            <p class="subtitle">Итоги</p>
-                            <p class="txt">
-                                Разъяснения порядка дальнейших действий клиента
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="reviews">
-                <div class="container">
-                    <span class="subtitle">Отзывы</span>
-                    <h2>Что о нас говорят<br />наши клиенты</h2>
-                    <div class="reviews__slider">
-                        <div class="reviews__wrapper">
-                            <article class="reviews__slide reviews-card">
-                                <p class="txt">
-                                    Lorem ipsum dolor sit amet consectetur. Et pretium
-                                    blandit mattis ipsum rhoncus adipiscing eu sagittis ut.
-                                    Sit donec dignissim neque natoque nisl ultrices accumsan
-                                    congue. Lectus tristique sed mauris lectus justo ut
-                                    cursus id nec. Pellentesque rhoncus est vitae semper
-                                    odio euismod fusce tincidunt ipsum.
-                                </p>
-                                <span class="subtitle">Имя Отчество Фамилия</span>
-                                <span class="txt">Семейные споры</span>
-                            </article>
-                            <article class="reviews__slide reviews-card">
-                                <p class="txt">
-                                    Lorem ipsum dolor sit amet consectetur. Et pretium
-                                    blandit mattis ipsum rhoncus adipiscing eu sagittis ut.
-                                    Sit donec dignissim neque natoque nisl ultrices accumsan
-                                    congue. Lectus tristique sed mauris lectus justo ut
-                                    cursus id nec. Pellentesque rhoncus est vitae semper
-                                    odio euismod fusce tincidunt ipsum.
-                                </p>
-                                <span class="subtitle">Имя Отчество Фамилия</span>
-                                <span class="txt">Права юридических лиц и ИП</span>
-                            </article>
-                            <article class="reviews__slide reviews-card">
-                                <p class="txt">
-                                    Lorem ipsum dolor sit amet consectetur. Et pretium
-                                    blandit mattis ipsum rhoncus adipiscing eu sagittis ut.
-                                    Sit donec dignissim neque natoque nisl ultrices accumsan
-                                    congue. Lectus tristique sed mauris lectus justo ut
-                                    cursus id nec. Pellentesque rhoncus est vitae semper
-                                    odio euismod fusce tincidunt ipsum.
-                                </p>
-                                <span class="subtitle">Имя Отчество Фамилия</span>
-                                <span class="txt">Жилищные споры</span>
-                            </article>
-                        </div>
-                        <div class="reviews__nav slider__nav">
+                        <div
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="150"
+                            class="about__btn"
+                        >
                             <button class="btn">
-                                Смотреть все отзывы
+                                Читать полностью
                                 <svg
                                     width="24"
                                     height="24"
@@ -705,45 +515,977 @@
                                     />
                                 </svg>
                             </button>
-                            <div class="slider__pagination">
-                                <span class="active"></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="slider__arrows">
-                                <div class="slider__prev">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M15 18L9 12L15 6"
-                                            stroke="#171717"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
+                        </div>
+                    </div>
+                    <div class="about__container">
+                        <div class="about__slider swiper">
+                            <div
+                                data-aos="fade-down-left"
+                                data-aos-duration="1500"
+                                class="about__bg"
+                            ></div>
+                            <div
+                                data-aos="fade-down-left"
+                                data-aos-duration="1500"
+                                class="about__wrapper swiper-wrapper"
+                            >
+                                <div class="about__slide swiper-slide">
+                                    <img
+                                        src="/images/about/1.jpg"
+                                        alt="Коллегия"
+                                    />
                                 </div>
-                                <div class="slider__next">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
+                                <div class="about__slide swiper-slide">
+                                    <img
+                                        src="/images/about/2.png"
+                                        alt="Коллегия"
+                                    />
+                                </div>
+                                <div class="about__slide swiper-slide">
+                                    <img
+                                        src="/images/about/1.jpg"
+                                        alt="Коллегия"
+                                    />
+                                </div>
+                                <div class="about__slide swiper-slide">
+                                    <img
+                                        src="/images/about/2.png"
+                                        alt="Коллегия"
+                                    />
+                                </div>
+                                <div class="about__slide swiper-slide">
+                                    <img
+                                        src="/images/about/1.jpg"
+                                        alt="Коллегия"
+                                    />
+                                </div>
+                                <div class="about__slide swiper-slide">
+                                    <img
+                                        src="/images/about/2.png"
+                                        alt="Коллегия"
+                                    />
+                                </div>
+                            </div>
+                            <div class="about__nav slider__nav">
+                                <div
+                                    data-aos="fade-right"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="100"
+                                    class="slider__pagination swiper-pagination"
+                                >
+                                    <span class="active"></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div
+                                    data-aos="fade-left"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="100"
+                                    class="slider__arrows"
+                                >
+                                    <div
+                                        class="slider__prev swiper-button-prev"
                                     >
-                                        <path
-                                            d="M9 18L15 12L9 6"
-                                            stroke="#171717"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M15 18L9 12L15 6"
+                                                stroke="#171717"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div
+                                        class="slider__next swiper-button-next"
+                                    >
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M9 18L15 12L9 6"
+                                                stroke="#171717"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="services">
+                <div class="services__background full-bg">
+                    <img src="/images/bg/services.jpg" alt="Наша область деятельности" />
+                </div>
+                <div class="container">
+                    <div class="services__text">
+                        <span
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            class="subtitle subtitle_light"
+                            >Услуги</span
+                        >
+                        <h2
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="50"
+                            class="light"
+                        >
+                            Наша область<br />деятельности
+                        </h2>
+                        <p
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="txt"
+                        >
+                            Если у вас возникли какие-либо споры или вопросы, сложности с
+                            законом или его нарушениями, и вы точно не понимаете, какие
+                            услуги вам нужны или как действовать в вашей ситуации, чтобы не
+                            усугублять и без того непонятную ситуацию, лучше обратиться к
+                            специалистам, которые обязательно помогут вам определиться со
+                            степенью из ваших вопросов, а также найти решение.
+                        </p>
+                        <div
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="150"
+                            class="services__btn"
+                        >
+                            <button class="btn btn_light">
+                                Получить консультацию
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="services__links">
+                        <div
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                            class="services__link"
+                        >
+                            <a href="#">
+                                Уголовные дела
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                        <div
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="services__link"
+                        >
+                            <a href="#">
+                                Семейные споры
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                        <div
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="200"
+                            class="services__link"
+                        >
+                            <a href="#">
+                                Права юридических лиц и ИП
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                        <div
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="300"
+                            class="services__link"
+                        >
+                            <a href="#">
+                                Административные дела
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                        <div
+                            data-aos="fade-left"
+                            data-aos-delay="400"
+                            data-aos-duration="1500"
+                            class="services__link"
+                        >
+                            <a href="#">
+                                Жилищные споры
+            
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                        <div
+                            data-aos="fade-left"
+                            data-aos-delay="500"
+                            data-aos-duration="1500"
+                            class="services__link"
+                        >
+                            <a href="#">
+                                Права потребителя
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                        <div
+                            data-aos="fade-left"
+                            data-aos-delay="600"
+                            data-aos-duration="1500"
+                            class="services__link"
+                        >
+                            <a href="#">
+                                Договорные споры
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                        <div
+                            data-aos="fade-left"
+                            data-aos-delay="700"
+                            data-aos-duration="1500"
+                            class="services__link"
+                        >
+                            <a href="#">
+                                Права автомобилистов
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                        <div
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="800"
+                            class="services__link"
+                        >
+                            <a href="#">
+                                Гражданство и миграция
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="team">
+                <div class="container">
+                    <div class="team__text">
+                        <span
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            class="subtitle"
+                            >Команда</span
+                        >
+                        <h2
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="50"
+                        >
+                            Наши<br />специалисты
+                        </h2>
+                        <p
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="txt"
+                        >
+                            Lorem ipsum dolor sit amet consectetur. Elementum condimentum
+                            urna sed a. Odio at id non vulputate at scelerisque ornare diam.
+                            Malesuada adipiscing gravida in mattis tortor ullamcorper
+                            elementum. Consectetur iaculis pulvinar vitae lectus. Sed enim
+                            sit semper integer. Aliquam proin sed eu aliquet sit. Arcu ut in
+                            urna consectetur turpis ultricies. Risus pharetra viverra eu
+                            risus magna. Vestibulum est augue consectetur nisi interdum
+                            in...
+                        </p>
+                        <div
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="150"
+                            class="team__btn"
+                        >
+                            <button class="btn">
+                                Подробнее
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M9 18L15 12L9 6"
+                                        stroke="#171717"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="team__container">
+                        <div class="swiper team__slider">
+                            <div
+                                data-aos="fade-left"
+                                data-aos-duration="1500"
+                                class="swiper-wrapper team__wrapper"
+                            >
+                                <div class="swiper-slide">
+                                    <a
+                                        href="#"
+                                        class="team__slide team__slide_act team-card"
+                                    >
+                                        <img
+                                            src="/images/team/1.png"
+                                            alt="Василий Васильевич Левенок"
                                         />
-                                    </svg>
+                                        <div class="team-card__desc">
+                                            <h4 class="title">
+                                                Василий Васильевич Левенок
+                                            </h4>
+                                            <p class="txt">Уголовное право</p>
+                                            <span>Подробнее</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="team__slide team-card">
+                                        <img
+                                            src="/images/team/2.png"
+                                            alt="Людмила Владимировна Серова"
+                                        />
+                                        <div class="team-card__desc">
+                                            <h4 class="title">
+                                                Людмила Владимировна Серова
+                                            </h4>
+                                            <p class="txt">Юридическое представительство</p>
+                                            <span>Подробнее</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="team__slide team-card">
+                                        <img
+                                            src="/images/team/3.png"
+                                            alt="Алексей Александрович Абрамов"
+                                        />
+                                        <div class="team-card__desc">
+                                            <h4 class="title">
+                                                Алексей Александрович Абрамов
+                                            </h4>
+                                            <p class="txt">Судебное представительство</p>
+                                            <span>Подробнее</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="team__slide team-card">
+                                        <img
+                                            src="/images/team/3.png"
+                                            alt="Алексей Александрович Абрамов"
+                                        />
+                                        <div class="team-card__desc">
+                                            <h4 class="title">
+                                                Алексей Александрович Абрамов
+                                            </h4>
+                                            <p class="txt">Судебное представительство</p>
+                                            <span>Подробнее</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="team__slide team-card">
+                                        <img
+                                            src="/images/team/3.png"
+                                            alt="Алексей Александрович Абрамов"
+                                        />
+                                        <div class="team-card__desc">
+                                            <h4 class="title">
+                                                Алексей Александрович Абрамов
+                                            </h4>
+                                            <p class="txt">Судебное представительство</p>
+                                            <span>Подробнее</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="team__nav slider__nav">
+                                <div
+                                    data-aos="fade-right"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="100"
+                                    class="slider__pagination swiper-pagination"
+                                >
+                                    <span class="active"></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div
+                                    data-aos="fade-left"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="100"
+                                    class="slider__arrows"
+                                >
+                                    <div class="slider__prev swiper-button-prev">
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M15 18L9 12L15 6"
+                                                stroke="#171717"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div class="slider__next swiper-button-next">
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M9 18L15 12L9 6"
+                                                stroke="#171717"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="stages">
+                <div class="stages__background full-bg">
+                    <img src="/images/bg/stages.png" alt="Как мы работаем" />
+                </div>
+                <div class="container">
+                    <h2 data-aos="fade" data-aos-duration="1500" class="light">
+                        Как мы работаем
+                    </h2>
+                    <div class="stages__grid">
+                        <div
+                            data-aos="fade-down-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="stages__item"
+                        >
+                            <div class="stages__item-wrapper">
+                                <span>01</span>
+                                <div class="stages__icon">
+                                    <img
+                                        src="/images/stages/icon.svg"
+                                        alt="Заявка"
+                                    />
+                                </div>
+                                <p class="subtitle">Заявка</p>
+                                <p class="txt">
+                                    <a class="popup_link light" href="#"
+                                        >Оставьте заявку</a
+                                    >
+                                    на сайте<br />или позвоните по телефону
+                                    <a
+                                        class="light"
+                                        href="tel:+7 (918) 311-31-20"
+                                        >+7 (918) 311-31-20</a
+                                    >
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            data-aos="fade-down"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="stages__item"
+                        >
+                            <div class="stages__item-wrapper">
+                                <span>02</span>
+                                <div class="stages__icon">
+                                    <img
+                                        src="/images/stages/icon-1.svg"
+                                        alt="Консультация"
+                                    />
+                                </div>
+                                <p class="subtitle">Консультация</p>
+                                <p class="txt">
+                                    Изучение документов и тщательная
+                                    выработка<br />правовой позиции<br />(важный
+                                    этап, потом изменить позицию уже не
+                                    получится)
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            data-aos="fade-down-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="stages__item"
+                        >
+                            <div class="stages__item-wrapper">
+                                <span>03</span>
+                                <div class="stages__icon">
+                                    <img
+                                        src="/images/stages/icon-2.svg"
+                                        alt="Процессуальные документы"
+                                    />
+                                </div>
+                                <p class="subtitle">Процессуальные документы</p>
+                                <p class="txt">
+                                    Cоставление и подача искового заявления,
+                                    апелляций и иных документов процессуального
+                                    характера, необходимых<br />для разрешения
+                                    дела
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            data-aos="fade-up-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="stages__item"
+                        >
+                            <div class="stages__item-wrapper">
+                                <span>04</span>
+                                <div class="stages__icon">
+                                    <img
+                                        src="/images/stages/icon-3.svg"
+                                        alt="Процесс"
+                                    />
+                                </div>
+                                <p class="subtitle">Процесс</p>
+                                <p class="txt">
+                                    Обязательное участие адвокат<br />в судебном
+                                    заседании
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="stages__item"
+                        >
+                            <div class="stages__item-wrapper">
+                                <span>05</span>
+                                <div class="stages__icon">
+                                    <img
+                                        src="/images/stages/icon-4.svg"
+                                        alt="Результат"
+                                    />
+                                </div>
+                                <p class="subtitle">Результат</p>
+                                <p class="txt">
+                                    Получение судебного акта, определений<br />и
+                                    постановлений суда
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            data-aos="fade-up-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="stages__item"
+                        >
+                            <div class="stages__item-wrapper">
+                                <span>06</span>
+                                <div class="stages__icon">
+                                    <img
+                                        src="/images/stages/icon-5.svg"
+                                        alt="Итоги"
+                                    />
+                                </div>
+                                <p class="subtitle">Итоги</p>
+                                <p class="txt">
+                                    Разъяснения порядка дальнейших действий
+                                    клиента
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="reviews">
+                <div class="container">
+                    <span data-aos="fade-right" data-aos-duration="1500" class="subtitle"
+                        >Отзывы</span
+                    >
+                    <h2 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="50">
+                        Что о нас говорят<br />наши клиенты
+                    </h2>
+                    <div class="reviews__container">
+                        <div class="reviews__slider swiper">
+                            <div class="reviews__wrapper swiper-wrapper">
+                                <article
+                                    data-aos="fade"
+                                    data-aos-duration="500"
+                                    data-aos-delay="1600"
+                                    class="reviews__slide reviews-card swiper-slide"
+                                >
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Et pretium
+                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
+                                        ut. Sit donec dignissim neque natoque nisl ultrices
+                                        accumsan congue. Lectus tristique sed mauris lectus
+                                        justo ut cursus id nec. Pellentesque rhoncus est
+                                        vitae semper odio euismod fusce tincidunt ipsum.
+                                    </p>
+                                    <span class="subtitle">Имя Отчество Фамилия</span>
+                                    <span class="txt">Семейные споры</span>
+                                </article>
+                                <article
+                                    data-aos="fade"
+                                    data-aos-duration="500"
+                                    data-aos-delay="2100"
+                                    class="reviews__slide reviews-card swiper-slide"
+                                >
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Et pretium
+                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
+                                        ut. Sit donec dignissim neque natoque nisl ultrices
+                                        accumsan congue. Lectus tristique sed mauris lectus
+                                        justo ut cursus id nec. Pellentesque rhoncus est
+                                        vitae semper odio euismod fusce tincidunt ipsum.
+                                    </p>
+                                    <span class="subtitle">Имя Отчество Фамилия</span>
+                                    <span class="txt">Права юридических лиц и ИП</span>
+                                </article>
+                                <article
+                                    data-aos="fade"
+                                    data-aos-duration="500"
+                                    data-aos-delay="2600"
+                                    class="reviews__slide reviews-card swiper-slide"
+                                >
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Et pretium
+                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
+                                        ut. Sit donec dignissim neque natoque nisl ultrices
+                                        accumsan congue. Lectus tristique sed mauris lectus
+                                        justo ut cursus id nec. Pellentesque rhoncus est
+                                        vitae semper odio euismod fusce tincidunt ipsum.
+                                    </p>
+                                    <span class="subtitle">Имя Отчество Фамилия</span>
+                                    <span class="txt">Жилищные споры</span>
+                                </article>
+                                <article class="reviews__slide reviews-card swiper-slide">
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Et pretium
+                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
+                                        ut. Sit donec dignissim neque natoque nisl ultrices
+                                        accumsan congue. Lectus tristique sed mauris lectus
+                                        justo ut cursus id nec. Pellentesque rhoncus est
+                                        vitae semper odio euismod fusce tincidunt ipsum.
+                                    </p>
+                                    <span class="subtitle">Имя Отчество Фамилия</span>
+                                    <span class="txt">Жилищные споры</span>
+                                </article>
+                                <article
+                                    data-aos="fade"
+                                    data-aos-duration="500"
+                                    data-aos-delay="3100"
+                                    class="reviews__slide reviews-card swiper-slide"
+                                >
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Et pretium
+                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
+                                        ut. Sit donec dignissim neque natoque nisl ultrices
+                                        accumsan congue. Lectus tristique sed mauris lectus
+                                        justo ut cursus id nec. Pellentesque rhoncus est
+                                        vitae semper odio euismod fusce tincidunt ipsum.
+                                    </p>
+                                    <span class="subtitle">Имя Отчество Фамилия</span>
+                                    <span class="txt">Жилищные споры</span>
+                                </article>
+                                <article
+                                    data-aos="fade"
+                                    data-aos-duration="500"
+                                    data-aos-delay="3600"
+                                    class="reviews__slide reviews-card swiper-slide"
+                                >
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Et pretium
+                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
+                                        ut. Sit donec dignissim neque natoque nisl ultrices
+                                        accumsan congue. Lectus tristique sed mauris lectus
+                                        justo ut cursus id nec. Pellentesque rhoncus est
+                                        vitae semper odio euismod fusce tincidunt ipsum.
+                                    </p>
+                                    <span class="subtitle">Имя Отчество Фамилия</span>
+                                    <span class="txt">Жилищные споры</span>
+                                </article>
+                                <article
+                                    data-aos="fade"
+                                    data-aos-duration="500"
+                                    data-aos-delay="4100"
+                                    class="reviews__slide reviews-card swiper-slide"
+                                >
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Et pretium
+                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
+                                        ut. Sit donec dignissim neque natoque nisl ultrices
+                                        accumsan congue. Lectus tristique sed mauris lectus
+                                        justo ut cursus id nec. Pellentesque rhoncus est
+                                        vitae semper odio euismod fusce tincidunt ipsum.
+                                    </p>
+                                    <span class="subtitle">Имя Отчество Фамилия</span>
+                                    <span class="txt">Жилищные споры</span>
+                                </article>
+                                <article
+                                    data-aos="fade"
+                                    data-aos-duration="500"
+                                    data-aos-delay="4600"
+                                    class="reviews__slide reviews-card swiper-slide"
+                                >
+                                    <div class="width-indicator"></div>
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Et pretium
+                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
+                                        ut. Sit donec dignissim neque natoque nisl ultrices
+                                        accumsan congue. Lectus tristique sed mauris lectus
+                                        justo ut cursus id nec. Pellentesque rhoncus est
+                                        vitae semper odio euismod fusce tincidunt ipsum.
+                                    </p>
+                                    <span class="subtitle">Имя Отчество Фамилия</span>
+                                    <span class="txt">Жилищные споры</span>
+                                </article>
+                            </div>
+                            <div class="reviews__nav slider__nav">
+                                <div
+                                    data-aos="fade-right"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="100"
+                                    class="reviews__btn"
+                                >
+                                    <button class="btn">
+                                        Смотреть все отзывы
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M9 18L15 12L9 6"
+                                                stroke="#171717"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div
+                                    data-aos="fade"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="100"
+                                    class="slider__pagination swiper-pagination"
+                                >
+                                    <span class="active"></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div
+                                    data-aos="fade-left"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="100"
+                                    class="slider__arrows"
+                                >
+                                    <div class="slider__prev swiper-button-prev">
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M15 18L9 12L15 6"
+                                                stroke="#171717"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div class="slider__next swiper-button-next">
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M9 18L15 12L9 6"
+                                                stroke="#171717"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -757,9 +1499,26 @@
                 </div>
                 <div class="container">
                     <div class="faq__text">
-                        <span class="subtitle">Вопрос-ответ</span>
-                        <h2>Вопросы которые могли возникнуть</h2>
-                        <p class="txt">
+                        <span
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            class="subtitle subtitle_light"
+                            >Вопрос-ответ</span
+                        >
+                        <h2
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="50"
+                            class="light"
+                        >
+                            Вопросы которые могли возникнуть
+                        </h2>
+                        <p
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="txt"
+                        >
                             Lorem ipsum dolor sit amet consectetur. Tortor sollicitudin at
                             habitasse tincidunt sed neque adipiscing. In ornare ac urna non
                             enim sollicitudin ullamcorper sed. Mattis sodales ipsum
@@ -768,248 +1527,14 @@
                             proin ultricies. In nullam quam nunc enim mi vel nisl. Massa
                             placerat quis a lorem. Lorem consequat posuere.
                         </p>
-                        <button class="btn btn_light">
-                            Задать вопрос
-                            <svg
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M9 18L15 12L9 6"
-                                    stroke="#171717"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="faq__questions">
-                        <div class="faq__accordeon accordeon active">
-                            <div class="accordeon__head">
-                                <p class="title">
-                                    Вопрос<svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M6 9L12 15L18 9"
-                                            stroke="white"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </p>
-                            </div>
-                            <div class="accordeon__body">
-                                <p class="txt">
-                                    Lorem ipsum dolor sit amet consectetur. Ut habitasse
-                                    nunc urna netus. Volutpat ipsum venenatis eros dictumst
-                                    non adipiscing. Dolor lacus venenatis placerat dignissim
-                                    viverra tempus mollis ultrices pharetra. Sit lacinia
-                                    pharetra etiam faucibus odio. Turpis euismod mattis id
-                                    euismod sagittis. Placerat porttitor cursus libero est.
-                                    urpis euismod mattis id euismod sagittis. Placerat
-                                    porttitor cursus libero est.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faq__accordeon accordeon">
-                            <div class="accordeon__head">
-                                <p class="title">
-                                    Вопрос 2 возможен в две строчки<br />если прямо оооочень
-                                    длинный вопрос<svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M6 9L12 15L18 9"
-                                            stroke="white"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </p>
-                            </div>
-                            <div class="accordeon__body">
-                                <p class="txt">
-                                    Lorem ipsum dolor sit amet consectetur. Ut habitasse
-                                    nunc urna netus. Volutpat ipsum venenatis eros dictumst
-                                    non adipiscing. Dolor lacus venenatis placerat dignissim
-                                    viverra tempus mollis ultrices pharetra. Sit lacinia
-                                    pharetra etiam faucibus odio. Turpis euismod mattis id
-                                    euismod sagittis. Placerat porttitor cursus libero est.
-                                    urpis euismod mattis id euismod sagittis. Placerat
-                                    porttitor cursus libero est.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faq__accordeon accordeon">
-                            <div class="accordeon__head">
-                                <p class="title">
-                                    Вопрос 3<svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M6 9L12 15L18 9"
-                                            stroke="white"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </p>
-                            </div>
-                            <div class="accordeon__body">
-                                <p class="txt">
-                                    Lorem ipsum dolor sit amet consectetur. Ut habitasse
-                                    nunc urna netus. Volutpat ipsum venenatis eros dictumst
-                                    non adipiscing. Dolor lacus venenatis placerat dignissim
-                                    viverra tempus mollis ultrices pharetra. Sit lacinia
-                                    pharetra etiam faucibus odio. Turpis euismod mattis id
-                                    euismod sagittis. Placerat porttitor cursus libero est.
-                                    urpis euismod mattis id euismod sagittis. Placerat
-                                    porttitor cursus libero est.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="faq__accordeon accordeon">
-                            <div class="accordeon__head">
-                                <p class="title">
-                                    Вопрос 4<svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M6 9L12 15L18 9"
-                                            stroke="white"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
-                                </p>
-                            </div>
-                            <div class="accordeon__body">
-                                <p class="txt">
-                                    Lorem ipsum dolor sit amet consectetur. Ut habitasse
-                                    nunc urna netus. Volutpat ipsum venenatis eros dictumst
-                                    non adipiscing. Dolor lacus venenatis placerat dignissim
-                                    viverra tempus mollis ultrices pharetra. Sit lacinia
-                                    pharetra etiam faucibus odio. Turpis euismod mattis id
-                                    euismod sagittis. Placerat porttitor cursus libero est.
-                                    urpis euismod mattis id euismod sagittis. Placerat
-                                    porttitor cursus libero est.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="blog">
-                <div class="container">
-                    <span class="subtitle">Блог</span>
-                    <h2>Блог наших<br />адвокатов</h2>
-                    <div class="blog__slider">
-                        <div class="blog__wrapper">
-                            <div class="blog__slide">
-                                <article class="post-card">
-                                    <a
-                                        href="post.html"
-                                        class="post-card__link"
-                                        title="Как устроены семейные споры, которые решаются в суде?"
-                                    ></a>
-                                    <img
-                                        class="post-card__img"
-                                        src="/images/blog/1.png"
-                                        alt="Как устроены семейные споры, которые решаются в суде?"
-                                    />
-                                    <div class="post-card__desc">
-                                        <span class="post-card__category">Семейные споры</span>
-                                        <h3>Как устроены семейные споры, которые решаются в суде?</h3>
-                                        <span class="post-card__date">22 февраля 2024 г.</span>
-                                        <a
-                                            href="post.html"
-                                            title="Как устроены семейные споры, которые решаются в суде?"
-                                            >Читать полностью</a
-                                        >
-                                    </div>
-                                </article>
-                                
-                            </div>
-                            <div class="blog__slide">
-                                <article class="post-card">
-                                    <a
-                                        href="post.html"
-                                        class="post-card__link"
-                                        title="Как устроены семейные споры, которые решаются в суде?"
-                                    ></a>
-                                    <img
-                                        class="post-card__img"
-                                        src="/images/blog/1.png"
-                                        alt="Как устроены семейные споры, которые решаются в суде?"
-                                    />
-                                    <div class="post-card__desc">
-                                        <span class="post-card__category">Семейные споры</span>
-                                        <h3>Как устроены семейные споры, которые решаются в суде?</h3>
-                                        <span class="post-card__date">22 февраля 2024 г.</span>
-                                        <a
-                                            href="post.html"
-                                            title="Как устроены семейные споры, которые решаются в суде?"
-                                            >Читать полностью</a
-                                        >
-                                    </div>
-                                </article>
-                                
-                            </div>
-                            <div class="blog__slide">
-                                <article class="post-card">
-                                    <a
-                                        href="post.html"
-                                        class="post-card__link"
-                                        title="Как устроены семейные споры, которые решаются в суде?"
-                                    ></a>
-                                    <img
-                                        class="post-card__img"
-                                        src="/images/blog/1.png"
-                                        alt="Как устроены семейные споры, которые решаются в суде?"
-                                    />
-                                    <div class="post-card__desc">
-                                        <span class="post-card__category">Семейные споры</span>
-                                        <h3>Как устроены семейные споры, которые решаются в суде?</h3>
-                                        <span class="post-card__date">22 февраля 2024 г.</span>
-                                        <a
-                                            href="post.html"
-                                            title="Как устроены семейные споры, которые решаются в суде?"
-                                            >Читать полностью</a
-                                        >
-                                    </div>
-                                </article>
-                                
-                            </div>
-                        </div>
-                        <div class="blog__nav slider__nav">
-                            <button class="btn">
-                                Смотреть все новости
+                        <div
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="150"
+                            class="faq__btn"
+                        >
+                            <button class="btn btn_light">
+                                Задать вопрос
                                 <svg
                                     width="24"
                                     height="24"
@@ -1026,45 +1551,444 @@
                                     />
                                 </svg>
                             </button>
-                            <div class="slider__pagination">
-                                <span class="active"></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="slider__arrows">
-                                <div class="slider__prev">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M15 18L9 12L15 6"
-                                            stroke="#171717"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        />
-                                    </svg>
+                        </div>
+                    </div>
+                    <div class="faq__questions">
+                        <div
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                            class="faq__accordeon accordeon active"
+                        >
+                            <div class="faq__accordeon-wrapper">
+                                <div class="accordeon__head">
+                                    <p class="title">
+                                        Вопрос<svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M6 9L12 15L18 9"
+                                                stroke="white"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </p>
                                 </div>
-                                <div class="slider__next">
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9 18L15 12L9 6"
-                                            stroke="#171717"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
+                                <div class="accordeon__body">
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Ut habitasse
+                                        nunc urna netus. Volutpat ipsum venenatis eros
+                                        dictumst non adipiscing. Dolor lacus venenatis
+                                        placerat dignissim viverra tempus mollis ultrices
+                                        pharetra. Sit lacinia pharetra etiam faucibus odio.
+                                        Turpis euismod mattis id euismod sagittis. Placerat
+                                        porttitor cursus libero est. urpis euismod mattis id
+                                        euismod sagittis. Placerat porttitor cursus libero
+                                        est.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                            class="faq__accordeon accordeon"
+                        >
+                            <div class="faq__accordeon-wrapper">
+                                <div class="accordeon__head">
+                                    <p class="title">
+                                        Вопрос 2 возможен в две строчки<br />если прямо
+                                        оооочень длинный вопрос<svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M6 9L12 15L18 9"
+                                                stroke="white"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </p>
+                                </div>
+                                <div class="accordeon__body">
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Ut habitasse
+                                        nunc urna netus. Volutpat ipsum venenatis eros
+                                        dictumst non adipiscing. Dolor lacus venenatis
+                                        placerat dignissim viverra tempus mollis ultrices
+                                        pharetra. Sit lacinia pharetra etiam faucibus odio.
+                                        Turpis euismod mattis id euismod sagittis. Placerat
+                                        porttitor cursus libero est. urpis euismod mattis id
+                                        euismod sagittis. Placerat porttitor cursus libero
+                                        est.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="200"
+                            class="faq__accordeon accordeon"
+                        >
+                            <div class="faq__accordeon-wrapper">
+                                <div class="accordeon__head">
+                                    <p class="title">
+                                        Вопрос 3<svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M6 9L12 15L18 9"
+                                                stroke="white"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </p>
+                                </div>
+                                <div class="accordeon__body">
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Ut habitasse
+                                        nunc urna netus. Volutpat ipsum venenatis eros
+                                        dictumst non adipiscing. Dolor lacus venenatis
+                                        placerat dignissim viverra tempus mollis ultrices
+                                        pharetra. Sit lacinia pharetra etiam faucibus odio.
+                                        Turpis euismod mattis id euismod sagittis. Placerat
+                                        porttitor cursus libero est. urpis euismod mattis id
+                                        euismod sagittis. Placerat porttitor cursus libero
+                                        est.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            data-aos="fade-left"
+                            data-aos-duration="1500"
+                            data-aos-delay="300"
+                            class="faq__accordeon accordeon"
+                        >
+                            <div class="faq__accordeon-wrapper">
+                                <div class="accordeon__head">
+                                    <p class="title">
+                                        Вопрос 4<svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M6 9L12 15L18 9"
+                                                stroke="white"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </p>
+                                </div>
+                                <div class="accordeon__body">
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Ut habitasse
+                                        nunc urna netus. Volutpat ipsum venenatis eros
+                                        dictumst non adipiscing. Dolor lacus venenatis
+                                        placerat dignissim viverra tempus mollis ultrices
+                                        pharetra. Sit lacinia pharetra etiam faucibus odio.
+                                        Turpis euismod mattis id euismod sagittis. Placerat
+                                        porttitor cursus libero est. urpis euismod mattis id
+                                        euismod sagittis. Placerat porttitor cursus libero
+                                        est.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="blog">
+                <div class="container">
+                    <span data-aos="fade-right" data-aos-duration="1500" class="subtitle"
+                        >Блог</span
+                    >
+                    <h2 data-aos="fade-right" data-aos-duration="1500" data-aos-delay="50">
+                        Блог наших<br />адвокатов
+                    </h2>
+                    <div class="blog__container">
+                        <div class="blog__slider swiper">
+                            <div class="blog__wrapper swiper-wrapper">
+                                <div
+                                    data-aos="fade-up"
+                                    data-aos-duration="1200"
+                                    class="blog__slide swiper-slide"
+                                >
+                                    <article class="post-card">
+                                        <a
+                                            href="post.html"
+                                            class="post-card__link"
+                                            title="Как устроены семейные споры, которые решаются в суде?"
+                                        ></a>
+                                        <img
+                                            class="post-card__img"
+                                            src="/images/blog/1.png"
+                                            alt="Как устроены семейные споры, которые решаются в суде?"
                                         />
-                                    </svg>
+                                        <div class="post-card__desc">
+                                            <span class="post-card__category">Семейные споры</span>
+                                            <h3>Как устроены семейные споры, которые решаются в суде?</h3>
+                                            <span class="post-card__date">22 февраля 2024 г.</span>
+                                            <a
+                                                href="post.html"
+                                                title="Как устроены семейные споры, которые решаются в суде?"
+                                                >Читать полностью</a
+                                            >
+                                        </div>
+                                    </article>
+                                    
+                                </div>
+                                <div
+                                    data-aos="fade-up"
+                                    data-aos-duration="1200"
+                                    data-aos-delay="100"
+                                    class="blog__slide swiper-slide"
+                                >
+                                    <article class="post-card">
+                                        <a
+                                            href="post.html"
+                                            class="post-card__link"
+                                            title="Как устроены семейные споры, которые решаются в суде?"
+                                        ></a>
+                                        <img
+                                            class="post-card__img"
+                                            src="/images/blog/1.png"
+                                            alt="Как устроены семейные споры, которые решаются в суде?"
+                                        />
+                                        <div class="post-card__desc">
+                                            <span class="post-card__category">Семейные споры</span>
+                                            <h3>Как устроены семейные споры, которые решаются в суде?</h3>
+                                            <span class="post-card__date">22 февраля 2024 г.</span>
+                                            <a
+                                                href="post.html"
+                                                title="Как устроены семейные споры, которые решаются в суде?"
+                                                >Читать полностью</a
+                                            >
+                                        </div>
+                                    </article>
+                                    
+                                </div>
+                                <div
+                                    data-aos="fade-up"
+                                    data-aos-duration="1200"
+                                    data-aos-delay="200"
+                                    class="blog__slide swiper-slide"
+                                >
+                                    <article class="post-card">
+                                        <a
+                                            href="post.html"
+                                            class="post-card__link"
+                                            title="Как устроены семейные споры, которые решаются в суде?"
+                                        ></a>
+                                        <img
+                                            class="post-card__img"
+                                            src="/images/blog/1.png"
+                                            alt="Как устроены семейные споры, которые решаются в суде?"
+                                        />
+                                        <div class="post-card__desc">
+                                            <span class="post-card__category">Семейные споры</span>
+                                            <h3>Как устроены семейные споры, которые решаются в суде?</h3>
+                                            <span class="post-card__date">22 февраля 2024 г.</span>
+                                            <a
+                                                href="post.html"
+                                                title="Как устроены семейные споры, которые решаются в суде?"
+                                                >Читать полностью</a
+                                            >
+                                        </div>
+                                    </article>
+                                    
+                                </div>
+                                <div
+                                    data-aos="fade-up"
+                                    data-aos-duration="1200"
+                                    data-aos-delay="300"
+                                    class="blog__slide swiper-slide"
+                                >
+                                    <article class="post-card">
+                                        <a
+                                            href="post.html"
+                                            class="post-card__link"
+                                            title="Как устроены семейные споры, которые решаются в суде?"
+                                        ></a>
+                                        <img
+                                            class="post-card__img"
+                                            src="/images/blog/1.png"
+                                            alt="Как устроены семейные споры, которые решаются в суде?"
+                                        />
+                                        <div class="post-card__desc">
+                                            <span class="post-card__category">Семейные споры</span>
+                                            <h3>Как устроены семейные споры, которые решаются в суде?</h3>
+                                            <span class="post-card__date">22 февраля 2024 г.</span>
+                                            <a
+                                                href="post.html"
+                                                title="Как устроены семейные споры, которые решаются в суде?"
+                                                >Читать полностью</a
+                                            >
+                                        </div>
+                                    </article>
+                                    
+                                </div>
+                                <div
+                                    data-aos="fade-up"
+                                    data-aos-duration="1200"
+                                    data-aos-delay="400"
+                                    class="blog__slide swiper-slide"
+                                >
+                                    <article class="post-card">
+                                        <a
+                                            href="post.html"
+                                            class="post-card__link"
+                                            title="Как устроены семейные споры, которые решаются в суде?"
+                                        ></a>
+                                        <img
+                                            class="post-card__img"
+                                            src="/images/blog/1.png"
+                                            alt="Как устроены семейные споры, которые решаются в суде?"
+                                        />
+                                        <div class="post-card__desc">
+                                            <span class="post-card__category">Семейные споры</span>
+                                            <h3>Как устроены семейные споры, которые решаются в суде?</h3>
+                                            <span class="post-card__date">22 февраля 2024 г.</span>
+                                            <a
+                                                href="post.html"
+                                                title="Как устроены семейные споры, которые решаются в суде?"
+                                                >Читать полностью</a
+                                            >
+                                        </div>
+                                    </article>
+                                    
+                                </div>
+                                <div
+                                    data-aos="fade-up"
+                                    data-aos-duration="1200"
+                                    data-aos-delay="500"
+                                    class="blog__slide swiper-slide"
+                                >
+                                    <article class="post-card">
+                                        <a
+                                            href="post.html"
+                                            class="post-card__link"
+                                            title="Как устроены семейные споры, которые решаются в суде?"
+                                        ></a>
+                                        <img
+                                            class="post-card__img"
+                                            src="/images/blog/1.png"
+                                            alt="Как устроены семейные споры, которые решаются в суде?"
+                                        />
+                                        <div class="post-card__desc">
+                                            <span class="post-card__category">Семейные споры</span>
+                                            <h3>Как устроены семейные споры, которые решаются в суде?</h3>
+                                            <span class="post-card__date">22 февраля 2024 г.</span>
+                                            <a
+                                                href="post.html"
+                                                title="Как устроены семейные споры, которые решаются в суде?"
+                                                >Читать полностью</a
+                                            >
+                                        </div>
+                                    </article>
+                                    
+                                </div>
+                            </div>
+                            <div class="blog__nav slider__nav">
+                                <div
+                                    data-aos="fade-right"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="150"
+                                    class="blog__btn"
+                                >
+                                    <button class="btn">
+                                        Смотреть все новости
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M9 18L15 12L9 6"
+                                                stroke="#171717"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div
+                                    data-aos="fade"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="150"
+                                    class="slider__pagination swiper-pagination"
+                                >
+                                    <span class="active"></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div
+                                    data-aos="fade-left"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="150"
+                                    class="slider__arrows"
+                                >
+                                    <div class="slider__prev swiper-button-prev">
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M15 18L9 12L15 6"
+                                                stroke="#171717"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <div class="slider__next swiper-button-next">
+                                        <svg
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M9 18L15 12L9 6"
+                                                stroke="#171717"
+                                                stroke-width="2"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1078,7 +2002,7 @@
                 </div>
                 <div class="container">
                     <div class="feedback__contacnts">
-                        <h2>Остались вопросы?</h2>
+                        <h2 class="light">Остались вопросы?</h2>
                         <p class="txt">
                             Заполните форму справа и наш специалист свяжеться с вами чтобы
                             ответить на все ваши вопросы!
@@ -1124,14 +2048,37 @@
                         </label>
                         <label for="tel">
                             <span class="txt">Номер телефона для связи</span>
-                            <input type="tel" name="tel" id="tel" />
+                            <input
+                                type="tel"
+                                name="tel"
+                                id="tel"
+                                placeholder="+7 (xxx) xxx – xx – xx"
+                            />
                         </label>
                         <div class="feedback__form-bottom">
-                            <label for="policy">
-                                <input type="checkbox" name="policy" id="policy" />
+                            <label class="check-label" for="policy">
+                                <input id="policy" type="checkbox" name="policy" />
+                                <span class="fakecheck">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        viewBox="0 0 24 24"
+                                        id="checkmark"
+                                    >
+                                        <polyline
+                                            fill="none"
+                                            stroke="#111111"
+                                            stroke-width="2"
+                                            stroke-miterlimit="10"
+                                            points=" 5,12 9,16 18,8"
+                                        />
+                                    </svg>
+                                </span>
                                 <span class="txt">
                                     Согласен с
-                                    <a href="#">политикой<br />конфиденциальности</a>
+                                    <a class="light" href="#"
+                                        >политикой <br />конфиденциальности</a
+                                    >
                                 </span>
                             </label>
                             <button class="btn btn_light">
@@ -1173,7 +2120,7 @@
                         </p>
                     </div>
                     <nav class="footer__nav">
-                        <span class="title">Навигация</span>
+                        <span class="title light">Навигация</span>
                         <ul>
                             <li><a href="services.html" title="Услуги">Услуги</a></li>
                             <li>
@@ -1192,7 +2139,7 @@
                         </ul>
                     </nav>
                     <div class="footer__socials">
-                        <span class="title"> Социальные сети </span>
+                        <span class="title light"> Социальные сети </span>
                         <ul>
                             <li>
                                 <a href=""
@@ -1350,15 +2297,31 @@
                 </div>
             </div>
         </footer>
+        <script src="../js/jquery.min.js" type="module"></script>
+        <script src="../js/jquery.inputmask.bundle.min.js" type="module"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="../js/script.js" type="module"></script>
         
-        <section class="float__socials">
-            <div class="float__burger">
+        <section data-aos="fade-right" data-aos-duration="1500" class="float__socials">
+            <div
+                data-aos="fade-right"
+                data-aos-duration="1500"
+                data-aos-delay="100"
+                class="float__burger"
+            >
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <div class="float__links">
-                <a href="#">
+                <a
+                    data-aos="fade-right"
+                    data-aos-duration="1500"
+                    data-aos-delay="200"
+                    href="#"
+                >
                     <svg
                         width="32"
                         height="32"
@@ -1372,7 +2335,12 @@
                         />
                     </svg>
                 </a>
-                <a href="#">
+                <a
+                    data-aos="fade-right"
+                    data-aos-duration="1500"
+                    data-aos-delay="300"
+                    href="#"
+                >
                     <svg
                         id="whatsapp"
                         width="32"
@@ -1387,7 +2355,12 @@
                         />
                     </svg>
                 </a>
-                <a href="#">
+                <a
+                    data-aos="fade-right"
+                    data-aos-duration="1500"
+                    data-aos-delay="400"
+                    href="#"
+                >
                     <svg
                         id="facebook"
                         width="32"
@@ -1402,7 +2375,12 @@
                         />
                     </svg>
                 </a>
-                <a href="#">
+                <a
+                    data-aos="fade-right"
+                    data-aos-duration="1500"
+                    data-aos-delay="500"
+                    href="#"
+                >
                     <svg
                         id="vk"
                         width="32"
