@@ -113,6 +113,7 @@ $(document).ready(function () {
         });
     } else {
         $(".preloader").css("display", "none");
+        $("html, body").css("overflow", "auto");
     }
 
     //NOTE - Функционал работы аккордеонов
