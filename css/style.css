@@ -504,6 +504,12 @@ a.btn {
   margin: 0;
 }
 
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: unset;
+  height: unset;
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
   content: none;
@@ -696,13 +702,32 @@ a.btn {
   padding-top: 242px;
 }
 
-.offer__slide img,
-.offer__wrapper img {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  right: 0;
-  z-index: 1;
+.offer .swiper-slide .offer__content {
+  transform: translate(-100px, 0);
+  -moz-transform: translate(-100px, 0);
+  -ms-transform: translate(-100px, 0);
+  -webkit-transform: translate(-100px, 0);
+  -o-transform: translate(-100px, 0);
+  transform: translate(-100px, 0);
+}
+
+.offer .swiper-slide .offer__image img {
+  transform: translate(100px, 0);
+  -moz-transform: translate(100px, 0);
+  -ms-transform: translate(100px, 0);
+  -webkit-transform: translate(100px, 0);
+  -o-transform: translate(100px, 0);
+  transform: translate(100px, 0);
+}
+
+.offer .swiper-slide-active .offer__content,
+.offer .swiper-slide-active .offer__image img {
+  transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 .offer__content {
@@ -710,6 +735,30 @@ a.btn {
   z-index: 2;
   width: 490px;
   height: 535px;
+  -webkit-transition: all 0.6s ease-out 0s;
+  -moz-transition: all 0.6s ease-out 0s;
+  -ms-transition: all 0.6s ease-out 0s;
+  -o-transition: all 0.6s ease-out 0s;
+  transition: all 0.6s ease-out 0s;
+}
+
+.offer__image {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.offer__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  -webkit-transition: all 0.6s ease-out 0s;
+  -moz-transition: all 0.6s ease-out 0s;
+  -ms-transition: all 0.6s ease-out 0s;
+  -o-transition: all 0.6s ease-out 0s;
+  transition: all 0.6s ease-out 0s;
 }
 
 .offer__desc {
@@ -760,14 +809,6 @@ a.btn {
   color: #93a6e6;
 }
 
-.offer .swiper {
-  overflow: auto !important;
-}
-
-.offer .swiper-creative .swiper-slide {
-  overflow: auto !important;
-}
-
 .offer__pagination {
   position: absolute;
   bottom: 64px !important;
@@ -783,7 +824,7 @@ a.btn {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  gap: 12px;
+  gap: 54px;
   z-index: 4;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
@@ -800,12 +841,16 @@ a.btn {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  gap: 12px;
   padding: 0 !important;
   width: auto !important;
   height: auto !important;
   border-radius: 0 !important;
   position: relative !important;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
 }
 
 .offer__pagination .swiper-pagination-bullet-active {
@@ -857,7 +902,19 @@ a.btn {
   content: none;
 }
 
-.offer__pagination .swiper-pagination-separator {
+.offer__separators {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 64px !important;
+  left: 0 !important;
+}
+
+.offer__separators .swiper-pagination-separator {
   display: block;
   height: 2px;
   width: 30px;
@@ -868,7 +925,7 @@ a.btn {
   background-color: #686767;
 }
 
-.offer__pagination .swiper-pagination-separator line {
+.offer__separators .swiper-pagination-separator line {
   stroke: #ffffff;
   position: absolute;
   width: 100%;
@@ -879,11 +936,11 @@ a.btn {
   stroke-dashoffset: 30;
 }
 
-.offer__pagination .swiper-pagination-separator.swiper-pagination-separator-active line {
+.offer__separators .swiper-pagination-separator.swiper-pagination-separator-active line {
   animation: autoplayProgress 5s linear forwards;
 }
 
-.offer__pagination .swiper-pagination-separator:last-of-type {
+.offer__separators .swiper-pagination-separator:last-of-type {
   display: none;
 }
 
@@ -1203,6 +1260,18 @@ a.btn {
   bottom: 0;
   left: 0;
   background-color: #1e3685;
+}
+
+.swiper {
+  overflow: visible;
+}
+
+.swiper-slide {
+  overflow: visible !important;
+}
+
+.hidden {
+  overflow: hidden !important;
 }
 
 .container {
@@ -2397,6 +2466,17 @@ main {
 .header__slide {
   height: 506px;
   width: auto;
+  position: relative;
+}
+
+.header__slide-width {
+  width: 560px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
 }
 
 .header__slide .post-card__desc {

@@ -56,12 +56,44 @@
                 </div>
                 <div class="container">
                     <nav class="header__nav">
-                        <a href="services.html" title="Услуги">Услуги</a>
-                        <a href="team.html" title="Наша команда">Наша команда</a>
-                        <a href="contacts.html" title="Контакты">Контакты</a>
-                        <a href="about.html" title="О компании">О компании</a>
-                        <a href="reviews.html" title="Отзывы">Отзывы</a>
-                        <a href="blog.html" title="Блог">Блог</a>
+                        <li data-aos="fade-right" data-aos-duration="1500">
+                            <a href="services.html" title="Услуги">Услуги</a>
+                        </li>
+                        <li
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="100"
+                        >
+                            <a href="team.html" title="Наша команда">Наша команда</a>
+                        </li>
+                        <li
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="200"
+                        >
+                            <a href="contacts.html" title="Контакты">Контакты</a>
+                        </li>
+                        <li
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="300"
+                        >
+                            <a href="about.html" title="О компании">О компании</a>
+                        </li>
+                        <li
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="400"
+                        >
+                            <a href="reviews.html" title="Отзывы">Отзывы</a>
+                        </li>
+                        <li
+                            data-aos="fade-right"
+                            data-aos-duration="1500"
+                            data-aos-delay="500"
+                        >
+                            <a href="blog.html" title="Блог">Блог</a>
+                        </li>
                     </nav>
                     <section class="header__blog">
                         <div class="header__blog-head">
@@ -89,6 +121,7 @@
                             <div class="header__slider swiper">
                                 <div class="header__slider-wrapper swiper-wrapper">
                                     <div class="header__slide swiper-slide">
+                                        <div class="header__slide-width"></div>
                                         <article class="post-card">
                                             <a
                                                 href="post.html"
@@ -114,6 +147,7 @@
                                         
                                     </div>
                                     <div class="header__slide swiper-slide">
+                                        <div class="header__slide-width"></div>
                                         <article class="post-card">
                                             <a
                                                 href="post.html"
@@ -139,6 +173,33 @@
                                         
                                     </div>
                                     <div class="header__slide swiper-slide">
+                                        <div class="header__slide-width"></div>
+                                        <article class="post-card">
+                                            <a
+                                                href="post.html"
+                                                class="post-card__link"
+                                                title="Как устроены семейные споры, которые решаются в суде?"
+                                            ></a>
+                                            <img
+                                                class="post-card__img"
+                                                src="/images/blog/1.png"
+                                                alt="Как устроены семейные споры, которые решаются в суде?"
+                                            />
+                                            <div class="post-card__desc">
+                                                <span class="post-card__category">Семейные споры</span>
+                                                <h3>Как устроены семейные споры, которые решаются в суде?</h3>
+                                                <span class="post-card__date">22 февраля 2024 г.</span>
+                                                <a
+                                                    href="post.html"
+                                                    title="Как устроены семейные споры, которые решаются в суде?"
+                                                    >Читать полностью</a
+                                                >
+                                            </div>
+                                        </article>
+                                        
+                                    </div>
+                                    <div class="header__slide swiper-slide">
+                                        <div class="header__slide-width"></div>
                                         <article class="post-card">
                                             <a
                                                 href="post.html"
@@ -281,11 +342,12 @@
                                     </svg>
                                 </button>
                             </div>
-                            <img
-                                src="/images/mainscreen/serovalv.png"
-                                alt="Первая городская коллегия адвокатов в Краснодаре"
-                                class="offer__image"
-                            />
+                            <div class="offer__image">
+                                <img
+                                    src="/images/mainscreen/serovalv.png"
+                                    alt="Первая городская коллегия адвокатов в Краснодаре"
+                                />
+                            </div>
                             <div class="offer__desc">
                                 <div></div>
                                 <div class="offer__desc-wrapper">
@@ -617,11 +679,7 @@
                                     data-aos-duration="1500"
                                     data-aos-delay="100"
                                     class="slider__pagination swiper-pagination"
-                                >
-                                    <span class="active"></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
+                                ></div>
                                 <div
                                     data-aos="fade-left"
                                     data-aos-duration="1500"
@@ -911,8 +969,8 @@
                             <div class="reviews__wrapper swiper-wrapper">
                                 <article
                                     data-aos="fade"
-                                    data-aos-duration="500"
-                                    data-aos-delay="1600"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="400"
                                     class="reviews__slide reviews-card swiper-slide"
                                 >
                                     <p class="txt">
@@ -928,8 +986,8 @@
                                 </article>
                                 <article
                                     data-aos="fade"
-                                    data-aos-duration="500"
-                                    data-aos-delay="2100"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="500"
                                     class="reviews__slide reviews-card swiper-slide"
                                 >
                                     <p class="txt">
@@ -945,37 +1003,8 @@
                                 </article>
                                 <article
                                     data-aos="fade"
-                                    data-aos-duration="500"
-                                    data-aos-delay="2600"
-                                    class="reviews__slide reviews-card swiper-slide"
-                                >
-                                    <p class="txt">
-                                        Lorem ipsum dolor sit amet consectetur. Et pretium
-                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
-                                        ut. Sit donec dignissim neque natoque nisl ultrices
-                                        accumsan congue. Lectus tristique sed mauris lectus
-                                        justo ut cursus id nec. Pellentesque rhoncus est
-                                        vitae semper odio euismod fusce tincidunt ipsum.
-                                    </p>
-                                    <span class="subtitle">Имя Отчество Фамилия</span>
-                                    <span class="txt">Жилищные споры</span>
-                                </article>
-                                <article class="reviews__slide reviews-card swiper-slide">
-                                    <p class="txt">
-                                        Lorem ipsum dolor sit amet consectetur. Et pretium
-                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
-                                        ut. Sit donec dignissim neque natoque nisl ultrices
-                                        accumsan congue. Lectus tristique sed mauris lectus
-                                        justo ut cursus id nec. Pellentesque rhoncus est
-                                        vitae semper odio euismod fusce tincidunt ipsum.
-                                    </p>
-                                    <span class="subtitle">Имя Отчество Фамилия</span>
-                                    <span class="txt">Жилищные споры</span>
-                                </article>
-                                <article
-                                    data-aos="fade"
-                                    data-aos-duration="500"
-                                    data-aos-delay="3100"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="600"
                                     class="reviews__slide reviews-card swiper-slide"
                                 >
                                     <p class="txt">
@@ -991,8 +1020,8 @@
                                 </article>
                                 <article
                                     data-aos="fade"
-                                    data-aos-duration="500"
-                                    data-aos-delay="3600"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="700"
                                     class="reviews__slide reviews-card swiper-slide"
                                 >
                                     <p class="txt">
@@ -1008,8 +1037,8 @@
                                 </article>
                                 <article
                                     data-aos="fade"
-                                    data-aos-duration="500"
-                                    data-aos-delay="4100"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="800"
                                     class="reviews__slide reviews-card swiper-slide"
                                 >
                                     <p class="txt">
@@ -1025,8 +1054,42 @@
                                 </article>
                                 <article
                                     data-aos="fade"
-                                    data-aos-duration="500"
-                                    data-aos-delay="4600"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="900"
+                                    class="reviews__slide reviews-card swiper-slide"
+                                >
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Et pretium
+                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
+                                        ut. Sit donec dignissim neque natoque nisl ultrices
+                                        accumsan congue. Lectus tristique sed mauris lectus
+                                        justo ut cursus id nec. Pellentesque rhoncus est
+                                        vitae semper odio euismod fusce tincidunt ipsum.
+                                    </p>
+                                    <span class="subtitle">Имя Отчество Фамилия</span>
+                                    <span class="txt">Жилищные споры</span>
+                                </article>
+                                <article
+                                    data-aos="fade"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="1000"
+                                    class="reviews__slide reviews-card swiper-slide"
+                                >
+                                    <p class="txt">
+                                        Lorem ipsum dolor sit amet consectetur. Et pretium
+                                        blandit mattis ipsum rhoncus adipiscing eu sagittis
+                                        ut. Sit donec dignissim neque natoque nisl ultrices
+                                        accumsan congue. Lectus tristique sed mauris lectus
+                                        justo ut cursus id nec. Pellentesque rhoncus est
+                                        vitae semper odio euismod fusce tincidunt ipsum.
+                                    </p>
+                                    <span class="subtitle">Имя Отчество Фамилия</span>
+                                    <span class="txt">Жилищные споры</span>
+                                </article>
+                                <article
+                                    data-aos="fade"
+                                    data-aos-duration="1500"
+                                    data-aos-delay="1100"
                                     class="reviews__slide reviews-card swiper-slide"
                                 >
                                     <div class="width-indicator"></div>
@@ -1428,9 +1491,9 @@
         </footer>
         <script src="../js/jquery.min.js" type="module"></script>
         <script src="../js/jquery.inputmask.bundle.min.js" type="module"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="../js/swiper-bundle.min.js"></script>
+        <script src="../js/fancybox.umd.js"></script>
+        <script src="../js/aos.js"></script>
         <script src="../js/script.js" type="module"></script>
         
         <section data-aos="fade-right" data-aos-duration="1500" class="float__socials">

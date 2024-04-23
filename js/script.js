@@ -15,22 +15,21 @@ $(document).ready(function () {
                     {
                         height: "100%",
                     },
-                    900
+                    700
                 )
                 .animate(
                     {
                         left: "80%",
                     },
-                    1100
+                    900
                 );
-
             $(".preloader .numbers")
                 .delay(2700)
                 .animate(
                     {
                         height: $(".offer__numbers").height(),
                     },
-                    1100
+                    500
                 );
             $(".preloader")
                 .delay(2700)
@@ -40,33 +39,53 @@ $(document).ready(function () {
                     },
                     300
                 )
-                .delay(1100)
+                .delay(500)
                 .fadeOut(500);
             setTimeout(function () {
                 AOS.init({
                     once: true,
                     offset: -50,
                 });
-
                 //NOTE - Слайдер на главной в оффере
 
-                const autoplaySeparator = `<svg class='swiper-pagination-separator'>
-    <line x1="0" y1="0" x2="30" y2="0" stroke-width="40" />
-    </svg>`;
+                function initSeparators() {
+                    const paginationBullets = $(
+                        ".offer__slider .swiper-pagination-bullet"
+                    );
+                    $(".offer__separators").height(
+                        $(".offer__pagination").height()
+                    );
+                    for (let i = 0; i < paginationBullets.length; i++) {
+                        const separatorMarginStr =
+                            i == 0
+                                ? "style=margin-left:" +
+                                  (paginationBullets.eq(i).width() + 12) +
+                                  "px;"
+                                : "style=margin-left:" +
+                                  (12 + paginationBullets.eq(i).width() + 12) +
+                                  "px;";
 
+                        const autoplaySeparator =
+                            `<svg  ` +
+                            separatorMarginStr +
+                            ` class='swiper-pagination-separator'>
+                                            <line x1="0" y1="0" x2="30" y2="0" stroke-width="40" />
+                                            </svg>`;
+                        $(".offer__separators").append(autoplaySeparator);
+                    }
+                }
                 const offerSwiper = new Swiper(".offer__slider", {
                     slidesPerView: 1,
                     effect: "creative",
                     loop: true,
-                    grabCursor: true,
+                    grabCursor: false,
+                    simulateTouch: false,
                     creativeEffect: {
                         prev: {
                             opacity: 0,
-                            trancslate: [-50, -70],
                         },
                         next: {
                             opacity: 0,
-                            trancslate: [50, 70],
                         },
                     },
                     autoplay: {
@@ -82,29 +101,40 @@ $(document).ready(function () {
                                 className +
                                 '">' +
                                 (index + 1) +
-                                "</span>" +
-                                autoplaySeparator
+                                "</span>"
                             );
                         },
                     },
                     on: {
                         init() {
-                            $(
-                                ".swiper-pagination-separator-active"
-                            ).removeClass("swiper-pagination-separator-active");
-                            $(".swiper-pagination-bullet-active")
-                                .next()
-                                .addClass("swiper-pagination-separator-active");
-                        },
-                        slideChange() {
-                            $(
-                                ".swiper-pagination-separator-active"
-                            ).removeClass("swiper-pagination-separator-active");
-                            $(".swiper-pagination-bullet-active")
-                                .next()
+                            initSeparators();
+                            $(".swiper-pagination-separator")
+                                .eq(0)
                                 .addClass("swiper-pagination-separator-active");
                         },
                     },
+                });
+                offerSwiper.on("slideChangeTransitionStart", function () {
+                    for (
+                        let i = 0;
+                        i <
+                        $(".offer__pagination .swiper-pagination-bullet")
+                            .length;
+                        i++
+                    ) {
+                        if (
+                            $(".offer__pagination .swiper-pagination-bullet")
+                                .eq(i)
+                                .hasClass("swiper-pagination-bullet-active")
+                        ) {
+                            $(".swiper-pagination-separator").removeClass(
+                                "swiper-pagination-separator-active"
+                            );
+                            $(".swiper-pagination-separator")
+                                .eq(i)
+                                .addClass("swiper-pagination-separator-active");
+                        }
+                    }
                 });
             }, 3600);
             setTimeout(function () {
@@ -150,11 +180,12 @@ $(document).ready(function () {
         });
     footerNav.css("columnGap", (footerNavWidth - footerNavChildsWidth) / 2);
     
+    $(".header__slider").width($(".header__slide-width").width() * 3 + 20 * 2);
     const headerSwiper = new Swiper(".header__slider", {
         loop: true,
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 20,
-        grabCursor: true,
+        simulateTouch: false,
         // If we need pagination
         pagination: {
             el: ".header__slider .swiper-pagination",
@@ -171,7 +202,7 @@ $(document).ready(function () {
         loop: true,
         slidesPerView: 4,
         spaceBetween: 20,
-        grabCursor: true,
+        simulateTouch: false,
         // If we need pagination
         pagination: {
             el: ".swiper-pagination",
@@ -188,7 +219,7 @@ $(document).ready(function () {
         loop: true,
         slidesPerView: 5,
         spaceBetween: 20,
-        grabCursor: true,
+        simulateTouch: false,
         // If we need pagination
         pagination: {
             el: ".swiper-pagination",
@@ -205,7 +236,7 @@ $(document).ready(function () {
         loop: true,
         slidesPerView: 5,
         spaceBetween: 20,
-        grabCursor: true,
+        simulateTouch: false,
         // If we need pagination
         pagination: {
             el: ".swiper-pagination",
@@ -247,6 +278,17 @@ $(document).ready(function () {
     });
     
 
+    //NOTE - Ограничение ширины слайдеров после анимации появления
+
+    $(
+        ".swiper-button-prev, .swiper-button-next, .swiper-pagination-bullet"
+    ).click(function () {
+        $(this).closest(".swiper").addClass("hidden");
+    });
+    $(".swiper").on("mousedown", "*", function () {
+        console.log("first");
+    });
+
     //NOTE - Добавление сепараторов между ссылками в хлебных крошках
 
     let breadcrumbsSeparator = $(
@@ -256,7 +298,7 @@ $(document).ready(function () {
 
     //NOTE - Фиксирование офферной картинки в зависимости от ширины
 
-    if ($(".offer__image").width() > 600) {
+    if ($(".offer__image img").width() > 600) {
         $(".offer__image").css(
             "right",
             "-" +
@@ -334,6 +376,8 @@ $(document).ready(function () {
             "Заполните форму ниже и наш специалист свяжеться с вами чтобы ответить на все ваши вопросы!"
         );
     }
+
+    //NOTE - Содержание на странице поста
 
     if ($(".post-single").length) {
         const headers = [];
@@ -426,7 +470,7 @@ $(document).ready(function () {
         effect: "creative",
         slidesPerView: 1,
         loop: true,
-        grabCursor: true,
+        simulateTouch: false,
         // If we need pagination
         creativeEffect: {
             prev: {
@@ -461,7 +505,7 @@ $(document).ready(function () {
         loop: true,
         slidesPerView: $(".docs__slider").data("slides-per-view"),
         spaceBetween: 20,
-        grabCursor: true,
+        simulateTouch: false,
         // If we need pagination
         pagination: {
             el: ".docs__slider .swiper-pagination",
