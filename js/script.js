@@ -1,4 +1,19 @@
 $(document).ready(function () {
+    $(
+        "a:not([href*=javascript]):not([href*=\\#]):not(.fancybox):not([target]):not([data-fancybox])"
+    ).click(function () {
+        $(".cover-screen").slideDown(500);
+        // $("body").fadeOut();
+        let url = $(this).attr("href");
+        window.setTimeout(function () {
+            window.location.href = url;
+        }, 500);
+        return false;
+    });
+    $(window).on("load pageshow", function () {
+        $(".cover-screen").css("display", "block").slideUp(500);
+        // $("body").fadeIn();
+    });
     if (
         window.location.pathname === "/" ||
         window.location.pathname === "/index.html"
@@ -180,6 +195,29 @@ $(document).ready(function () {
         });
     footerNav.css("columnGap", (footerNavWidth - footerNavChildsWidth) / 2);
     
+    //NOTE - Изменение блока обратной связи на странице контактов
+    
+    if ($(".feedback").closest(".contacts-page").length) {
+        $(".feedback__contacnts .txt").text(
+            "Заполните форму ниже и наш специалист свяжеться с вами чтобы ответить на все ваши вопросы!"
+        );
+    }
+    
+    $(".popup__hide").click(function () {
+        $(".popup").fadeOut(450);
+        $("html, body").css("overflow", "auto");
+    });
+    $(".popup__open").click(function (e) {
+        e.preventDefault();
+        $(".popup").fadeIn(450);
+        $("html, body").css("overflow", "hidden");
+    });
+    $(".popup .feedback__form").submit(function (e) {
+        e.preventDefault();
+        $(".popup .feedback__form, .popup__text").fadeOut(450);
+        $(".popup__success").fadeIn(450);
+    });
+    
     $(".header__slider").width($(".header__slide-width").width() * 3 + 20 * 2);
     const headerSwiper = new Swiper(".header__slider", {
         loop: true,
@@ -196,6 +234,10 @@ $(document).ready(function () {
             nextEl: ".header__slider .swiper-button-next",
             prevEl: ".header__slider .swiper-button-prev",
         },
+    });
+    let totalNavItems = $(".header__nav").length;
+    $(".header__nav li").each(function (index) {
+        $(this).css("transition-delay", (totalNavItems - index) * 0.05 + "s");
     });
     
     const teamSwiper = new Swiper(".team__slider", {
@@ -261,6 +303,7 @@ $(document).ready(function () {
                 function () {
                     $(".header__menu").css("dispaly", "block");
                     $("html, body").css("overflow", "hidden");
+                    $(".header__menu").addClass("active");
                 }
             );
         } else {
@@ -272,6 +315,7 @@ $(document).ready(function () {
                 function () {
                     $(".header__menu").css("dispaly", "none");
                     $("html, body").css("overflow", "auto");
+                    $(".header__menu").removeClass("active");
                 }
             );
         }
@@ -341,7 +385,11 @@ $(document).ready(function () {
         placeholder: "+7 (xxx) xxx – xx – xx",
     });
     $telInput.on("focus", function () {
-        $(this).css("color", "#ffffff");
+        if ($(this).closest(".popup").length) {
+            $(this).css("color", "#171717");
+        } else {
+            $(this).css("color", "#ffffff");
+        }
         isTelInput = true;
     });
     $telInput.on("blur", function () {
@@ -351,8 +399,14 @@ $(document).ready(function () {
         isTelInput = false;
     });
     $telInput.on("mouseover", function () {
-        if (!$(this).val()) {
-            $(this).css("color", "#ffffff");
+        if ($(this).closest(".popup").length) {
+            if (!$(this).val()) {
+                $(this).css("color", "#171717");
+            }
+        } else {
+            if (!$(this).val()) {
+                $(this).css("color", "#ffffff");
+            }
         }
     });
     $telInput.on("mouseleave", function () {
@@ -361,21 +415,22 @@ $(document).ready(function () {
         }
     });
     $telInput.on("input", function () {
-        if ($(this).val()) {
-            isTelInput = true;
-            $(this).css("color", "#ffffff");
+        if ($(this).closest(".popup").length) {
+            if ($(this).val()) {
+                isTelInput = true;
+                $(this).css("color", "#171717");
+            } else {
+                isTelInput = false;
+            }
         } else {
-            isTelInput = false;
+            if ($(this).val()) {
+                isTelInput = true;
+                $(this).css("color", "#ffffff");
+            } else {
+                isTelInput = false;
+            }
         }
     });
-
-    //NOTE - Изменение блока обратной связи на странице контактов
-
-    if ($(".feedback").closest(".contacts-page").length) {
-        $(".feedback__contacnts .txt").text(
-            "Заполните форму ниже и наш специалист свяжеться с вами чтобы ответить на все ваши вопросы!"
-        );
-    }
 
     //NOTE - Содержание на странице поста
 
@@ -532,5 +587,21 @@ $(document).ready(function () {
         thumbs: {
             autoStart: true, // Автоматический запуск слайд-шоу
         },
+    });
+
+    //NOTE - Выпадающий список в форме отзывов
+
+    $(".reviews-cards__selector").click(function () {
+        $(".reviews-cards__options").slideToggle(450);
+        $(this).toggleClass("active");
+    });
+    $(".reviews-cards__options li").click(function () {
+        if (!$(this).hasClass("active")) {
+            $(".reviews-cards__selector").removeClass("active");
+            $(".reviews-cards__options li").removeClass("active");
+            $(this).addClass("active");
+            $(".reviews-cards__selector span").text($(this).text());
+            $(".reviews-cards__options").slideUp(450);
+        }
     });
 });

@@ -56,42 +56,22 @@
                 </div>
                 <div class="container">
                     <nav class="header__nav">
-                        <li data-aos="fade-right" data-aos-duration="1500">
+                        <li>
                             <a href="services.html" title="Услуги">Услуги</a>
                         </li>
-                        <li
-                            data-aos="fade-right"
-                            data-aos-duration="1500"
-                            data-aos-delay="100"
-                        >
+                        <li>
                             <a href="team.html" title="Наша команда">Наша команда</a>
                         </li>
-                        <li
-                            data-aos="fade-right"
-                            data-aos-duration="1500"
-                            data-aos-delay="200"
-                        >
+                        <li>
                             <a href="contacts.html" title="Контакты">Контакты</a>
                         </li>
-                        <li
-                            data-aos="fade-right"
-                            data-aos-duration="1500"
-                            data-aos-delay="300"
-                        >
+                        <li>
                             <a href="about.html" title="О компании">О компании</a>
                         </li>
-                        <li
-                            data-aos="fade-right"
-                            data-aos-duration="1500"
-                            data-aos-delay="400"
-                        >
+                        <li>
                             <a href="reviews.html" title="Отзывы">Отзывы</a>
                         </li>
-                        <li
-                            data-aos="fade-right"
-                            data-aos-duration="1500"
-                            data-aos-delay="500"
-                        >
+                        <li>
                             <a href="blog.html" title="Блог">Блог</a>
                         </li>
                     </nav>
@@ -226,24 +206,26 @@
                                     </div>
                                 </div>
                                 <div class="header__slider-nav slider__nav">
-                                    <a href="blog.html" class="btn btn_light">
-                                        Смотреть все новости
-                                        <svg
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path
-                                                d="M9 18L15 12L9 6"
-                                                stroke="#171717"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            />
-                                        </svg>
-                                    </a>
+                                    <div class="header__slider-nav-btn">
+                                        <a href="blog.html" class="btn btn_light">
+                                            Смотреть все новости
+                                            <svg
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M9 18L15 12L9 6"
+                                                    stroke="#171717"
+                                                    stroke-width="2"
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                />
+                                            </svg>
+                                        </a>
+                                    </div>
                                     <div class="slider__pagination swiper-pagination">
                                         <span class="active"></span>
                                         <span></span>
@@ -296,6 +278,7 @@
             <div class="progressBar"></div>
             <div class="numbers"></div>
         </div>
+        <div class="cover-screen"></div>
         
         <main>
             <section class="breadcrumbs">
@@ -514,6 +497,96 @@
             </section>
             
         </main>
+        <section class="popup">
+            <div class="container">
+                <div class="popup__hide">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="popup__success">
+                    <h1>Спасибо за вашу заявку!</h1>
+                    <p class="txt">
+                        Наш специалист свяжется с вами в ближайшее<br />время для
+                        дальнейшего обсуждения.
+                    </p>
+                </div>
+                <div class="popup__text">
+                    <h1>Оставить заявку</h1>
+                    <p class="txt">
+                        Оставьте свои контактные данные и наш специалист<br />свжяется с
+                        вами для персональной консультации!
+                    </p>
+                </div>
+                <form class="feedback__form">
+                    <label for="name">
+                        <span class="txt">Как к вам обращаться?</span>
+                        <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Иванов Иван Иванович"
+                        />
+                    </label>
+                    <label for="tel">
+                        <span class="txt">Номер телефона для связи</span>
+                        <input
+                            type="tel"
+                            name="tel"
+                            id="tel"
+                            placeholder="+7 (xxx) xxx – xx – xx"
+                        />
+                    </label>
+                    <div class="feedback__form-bottom">
+                        <label class="check-label check-label_black" for="popup-policy">
+                            <input
+                                id="popup-policy"
+                                type="checkbox"
+                                name="popup-policy"
+                            />
+                            <span class="fakecheck">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    viewBox="0 0 24 24"
+                                    id="checkmark"
+                                >
+                                    <polyline
+                                        fill="none"
+                                        stroke="#111111"
+                                        stroke-width="2"
+                                        stroke-miterlimit="10"
+                                        points=" 5,12 9,16 18,8"
+                                    />
+                                </svg>
+                            </span>
+                            <span class="txt">
+                                Согласен с
+                                <a href="#">политикой <br />конфиденциальности</a>
+                            </span>
+                        </label>
+                        <button class="btn">
+                            Отправить
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9 18L15 12L9 6"
+                                    stroke="#171717"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        
         <footer class="footer">
             <div class="footer__top">
                 <div class="container">
