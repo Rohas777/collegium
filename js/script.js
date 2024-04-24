@@ -2,8 +2,7 @@ $(document).ready(function () {
     $(
         "a:not([href*=javascript]):not([href*=\\#]):not(.fancybox):not([target]):not([data-fancybox])"
     ).click(function () {
-        $(".cover-screen").slideDown(500);
-        // $("body").fadeOut();
+        $(".cover-screen").css("display", "none").slideDown(500);
         let url = $(this).attr("href");
         window.setTimeout(function () {
             window.location.href = url;
@@ -11,8 +10,7 @@ $(document).ready(function () {
         return false;
     });
     $(window).on("load pageshow", function () {
-        $(".cover-screen").css("display", "block").slideUp(500);
-        // $("body").fadeIn();
+        $(".cover-screen").slideUp(500);
     });
     if (
         window.location.pathname === "/" ||
