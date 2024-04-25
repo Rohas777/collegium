@@ -32,28 +32,20 @@ $(document).ready(function () {
                 )
                 .animate(
                     {
-                        left: "80%",
+                        left: "67%",
                     },
                     900
                 );
-            $(".preloader .numbers")
-                .delay(2700)
-                .animate(
-                    {
-                        height: $(".offer__numbers").height(),
-                    },
-                    500
-                );
             $(".preloader")
-                .delay(2700)
+                .delay(3100)
                 .animate(
                     {
                         background: "transparent",
                     },
                     300
                 )
-                .delay(500)
-                .fadeOut(500);
+                .delay(300)
+                .fadeOut(300);
             setTimeout(function () {
                 AOS.init({
                     once: true,
@@ -152,7 +144,7 @@ $(document).ready(function () {
             }, 3600);
             setTimeout(function () {
                 $("html, body").css("overflow", "auto");
-            }, 4100);
+            }, 3900);
         });
     } else {
         $(".preloader").css("display", "none");
