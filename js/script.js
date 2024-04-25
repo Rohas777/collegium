@@ -9,7 +9,7 @@ $(document).ready(function () {
         }, 500);
         return false;
     });
-    $(window).on("load pageshow", function () {
+    $(window).on("load", function () {
         $(".cover-screen").slideUp(500);
     });
     if (
@@ -57,7 +57,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 AOS.init({
                     once: true,
-                    offset: -50,
+                    offset: 100,
                 });
                 //NOTE - Слайдер на главной в оффере
 
