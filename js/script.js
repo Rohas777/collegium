@@ -17,134 +17,134 @@ $(document).ready(function () {
         window.location.pathname === "/index.html"
     ) {
         $(window).on("load", function () {
-            $(".preloader").css("display", "none");
-            // $(".progressBar")
-            //     .animate(
-            //         {
-            //             width: "100%",
-            //         },
-            //         1600
-            //     )
-            //     .animate(
-            //         {
-            //             height: "100%",
-            //         },
-            //         700
-            //     )
-            //     .animate(
-            //         {
-            //             left: "67%",
-            //         },
-            //         900
-            //     );
-            // $(".preloader")
-            //     .delay(3100)
-            //     .animate(
-            //         {
-            //             background: "transparent",
-            //         },
-            //         300
-            //     )
-            //     .delay(300)
-            //     .fadeOut(300);
-            // setTimeout(function () {
-            AOS.init({
-                once: true,
-                offset: 100,
-            });
-            //NOTE - Слайдер на главной в оффере
-
-            function initSeparators() {
-                const paginationBullets = $(
-                    ".offer__slider .swiper-pagination-bullet"
+            $(".progressBar")
+                .animate(
+                    {
+                        width: "100%",
+                    },
+                    1600
+                )
+                .animate(
+                    {
+                        height: "100%",
+                    },
+                    700
+                )
+                .animate(
+                    {
+                        left: "67%",
+                    },
+                    900
                 );
-                $(".offer__separators").height(
-                    $(".offer__pagination").height()
-                );
-                for (let i = 0; i < paginationBullets.length; i++) {
-                    const separatorMarginStr =
-                        i == 0
-                            ? "style=margin-left:" +
-                              (paginationBullets.eq(i).width() + 12) +
-                              "px;"
-                            : "style=margin-left:" +
-                              (12 + paginationBullets.eq(i).width() + 12) +
-                              "px;";
+            $(".preloader")
+                .delay(3100)
+                .animate(
+                    {
+                        background: "transparent",
+                    },
+                    300
+                )
+                .delay(300)
+                .fadeOut(300);
+            setTimeout(function () {
+                AOS.init({
+                    once: true,
+                    offset: 100,
+                });
+                //NOTE - Слайдер на главной в оффере
 
-                    const autoplaySeparator =
-                        `<svg  ` +
-                        separatorMarginStr +
-                        ` class='swiper-pagination-separator'>
+                function initSeparators() {
+                    const paginationBullets = $(
+                        ".offer__slider .swiper-pagination-bullet"
+                    );
+                    $(".offer__separators").height(
+                        $(".offer__pagination").height()
+                    );
+                    for (let i = 0; i < paginationBullets.length; i++) {
+                        const separatorMarginStr =
+                            i == 0
+                                ? "style=margin-left:" +
+                                  (paginationBullets.eq(i).width() + 12) +
+                                  "px;"
+                                : "style=margin-left:" +
+                                  (12 + paginationBullets.eq(i).width() + 12) +
+                                  "px;";
+
+                        const autoplaySeparator =
+                            `<svg  ` +
+                            separatorMarginStr +
+                            ` class='swiper-pagination-separator'>
                                             <line x1="0" y1="0" x2="30" y2="0" stroke-width="40" />
                                             </svg>`;
-                    $(".offer__separators").append(autoplaySeparator);
-                }
-            }
-            const offerSwiper = new Swiper(".offer__slider", {
-                slidesPerView: 1,
-                effect: "creative",
-                loop: true,
-                grabCursor: false,
-                simulateTouch: false,
-                creativeEffect: {
-                    prev: {
-                        opacity: 0,
-                    },
-                    next: {
-                        opacity: 0,
-                    },
-                },
-                // autoplay: {
-                //     delay: $(".offer__slider").data("autoplay-delay"),
-                //     disableOnInteraction: false,
-                // },
-                pagination: {
-                    el: ".offer__slider .swiper-pagination",
-                    clickable: true,
-                    renderBullet: function (index, className) {
-                        return (
-                            '<span class="' +
-                            className +
-                            '">' +
-                            (index + 1) +
-                            "</span>"
-                        );
-                    },
-                },
-                on: {
-                    init() {
-                        initSeparators();
-                        $(".swiper-pagination-separator")
-                            .eq(0)
-                            .addClass("swiper-pagination-separator-active");
-                    },
-                },
-            });
-            offerSwiper.on("slideChangeTransitionStart", function () {
-                for (
-                    let i = 0;
-                    i <
-                    $(".offer__pagination .swiper-pagination-bullet").length;
-                    i++
-                ) {
-                    if (
-                        $(".offer__pagination .swiper-pagination-bullet")
-                            .eq(i)
-                            .hasClass("swiper-pagination-bullet-active")
-                    ) {
-                        $(".swiper-pagination-separator").removeClass(
-                            "swiper-pagination-separator-active"
-                        );
-                        $(".swiper-pagination-separator")
-                            .eq(i)
-                            .addClass("swiper-pagination-separator-active");
+                        $(".offer__separators").append(autoplaySeparator);
                     }
                 }
-            });
-            // }, 3600);
-            // setTimeout(function () {
-            $("html, body").css("overflow", "visible");
-            // }, 3900);
+                const offerSwiper = new Swiper(".offer__slider", {
+                    slidesPerView: 1,
+                    effect: "creative",
+                    loop: true,
+                    grabCursor: false,
+                    simulateTouch: false,
+                    creativeEffect: {
+                        prev: {
+                            opacity: 0,
+                        },
+                        next: {
+                            opacity: 0,
+                        },
+                    },
+                    autoplay: {
+                        delay: $(".offer__slider").data("autoplay-delay"),
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".offer__slider .swiper-pagination",
+                        clickable: true,
+                        renderBullet: function (index, className) {
+                            return (
+                                '<span class="' +
+                                className +
+                                '">' +
+                                (index + 1) +
+                                "</span>"
+                            );
+                        },
+                    },
+                    on: {
+                        init() {
+                            initSeparators();
+                            $(".swiper-pagination-separator")
+                                .eq(0)
+                                .addClass("swiper-pagination-separator-active");
+                        },
+                    },
+                });
+                offerSwiper.on("slideChangeTransitionStart", function () {
+                    for (
+                        let i = 0;
+                        i <
+                        $(".offer__pagination .swiper-pagination-bullet")
+                            .length;
+                        i++
+                    ) {
+                        if (
+                            $(".offer__pagination .swiper-pagination-bullet")
+                                .eq(i)
+                                .hasClass("swiper-pagination-bullet-active")
+                        ) {
+                            $(".swiper-pagination-separator").removeClass(
+                                "swiper-pagination-separator-active"
+                            );
+                            $(".swiper-pagination-separator")
+                                .eq(i)
+                                .addClass("swiper-pagination-separator-active");
+                        }
+                    }
+                });
+            }, 3600);
+            setTimeout(function () {
+                $("html, body").css("overflow", "visible");
+            }, 3900);
         });
     } else {
         $(".preloader").css("display", "none");
