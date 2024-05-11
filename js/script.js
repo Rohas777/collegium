@@ -17,138 +17,138 @@ $(document).ready(function () {
         window.location.pathname === "/index.html"
     ) {
         $(window).on("load", function () {
-            $(".progressBar")
-                .animate(
-                    {
-                        width: "100%",
-                    },
-                    1600
-                )
-                .animate(
-                    {
-                        height: "100%",
-                    },
-                    700
-                )
-                .animate(
-                    {
-                        left: "67%",
-                    },
-                    900
+            $(".preloader").css("display", "none");
+            // $(".progressBar")
+            //     .animate(
+            //         {
+            //             width: "100%",
+            //         },
+            //         1600
+            //     )
+            //     .animate(
+            //         {
+            //             height: "100%",
+            //         },
+            //         700
+            //     )
+            //     .animate(
+            //         {
+            //             left: "67%",
+            //         },
+            //         900
+            //     );
+            // $(".preloader")
+            //     .delay(3100)
+            //     .animate(
+            //         {
+            //             background: "transparent",
+            //         },
+            //         300
+            //     )
+            //     .delay(300)
+            //     .fadeOut(300);
+            // setTimeout(function () {
+            AOS.init({
+                once: true,
+                offset: 100,
+            });
+            //NOTE - Слайдер на главной в оффере
+
+            function initSeparators() {
+                const paginationBullets = $(
+                    ".offer__slider .swiper-pagination-bullet"
                 );
-            $(".preloader")
-                .delay(3100)
-                .animate(
-                    {
-                        background: "transparent",
-                    },
-                    300
-                )
-                .delay(300)
-                .fadeOut(300);
-            setTimeout(function () {
-                AOS.init({
-                    once: true,
-                    offset: 100,
-                });
-                //NOTE - Слайдер на главной в оффере
+                $(".offer__separators").height(
+                    $(".offer__pagination").height()
+                );
+                for (let i = 0; i < paginationBullets.length; i++) {
+                    const separatorMarginStr =
+                        i == 0
+                            ? "style=margin-left:" +
+                              (paginationBullets.eq(i).width() + 12) +
+                              "px;"
+                            : "style=margin-left:" +
+                              (12 + paginationBullets.eq(i).width() + 12) +
+                              "px;";
 
-                function initSeparators() {
-                    const paginationBullets = $(
-                        ".offer__slider .swiper-pagination-bullet"
-                    );
-                    $(".offer__separators").height(
-                        $(".offer__pagination").height()
-                    );
-                    for (let i = 0; i < paginationBullets.length; i++) {
-                        const separatorMarginStr =
-                            i == 0
-                                ? "style=margin-left:" +
-                                  (paginationBullets.eq(i).width() + 12) +
-                                  "px;"
-                                : "style=margin-left:" +
-                                  (12 + paginationBullets.eq(i).width() + 12) +
-                                  "px;";
-
-                        const autoplaySeparator =
-                            `<svg  ` +
-                            separatorMarginStr +
-                            ` class='swiper-pagination-separator'>
+                    const autoplaySeparator =
+                        `<svg  ` +
+                        separatorMarginStr +
+                        ` class='swiper-pagination-separator'>
                                             <line x1="0" y1="0" x2="30" y2="0" stroke-width="40" />
                                             </svg>`;
-                        $(".offer__separators").append(autoplaySeparator);
+                    $(".offer__separators").append(autoplaySeparator);
+                }
+            }
+            const offerSwiper = new Swiper(".offer__slider", {
+                slidesPerView: 1,
+                effect: "creative",
+                loop: true,
+                grabCursor: false,
+                simulateTouch: false,
+                creativeEffect: {
+                    prev: {
+                        opacity: 0,
+                    },
+                    next: {
+                        opacity: 0,
+                    },
+                },
+                // autoplay: {
+                //     delay: $(".offer__slider").data("autoplay-delay"),
+                //     disableOnInteraction: false,
+                // },
+                pagination: {
+                    el: ".offer__slider .swiper-pagination",
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                        return (
+                            '<span class="' +
+                            className +
+                            '">' +
+                            (index + 1) +
+                            "</span>"
+                        );
+                    },
+                },
+                on: {
+                    init() {
+                        initSeparators();
+                        $(".swiper-pagination-separator")
+                            .eq(0)
+                            .addClass("swiper-pagination-separator-active");
+                    },
+                },
+            });
+            offerSwiper.on("slideChangeTransitionStart", function () {
+                for (
+                    let i = 0;
+                    i <
+                    $(".offer__pagination .swiper-pagination-bullet").length;
+                    i++
+                ) {
+                    if (
+                        $(".offer__pagination .swiper-pagination-bullet")
+                            .eq(i)
+                            .hasClass("swiper-pagination-bullet-active")
+                    ) {
+                        $(".swiper-pagination-separator").removeClass(
+                            "swiper-pagination-separator-active"
+                        );
+                        $(".swiper-pagination-separator")
+                            .eq(i)
+                            .addClass("swiper-pagination-separator-active");
                     }
                 }
-                const offerSwiper = new Swiper(".offer__slider", {
-                    slidesPerView: 1,
-                    effect: "creative",
-                    loop: true,
-                    grabCursor: false,
-                    simulateTouch: false,
-                    creativeEffect: {
-                        prev: {
-                            opacity: 0,
-                        },
-                        next: {
-                            opacity: 0,
-                        },
-                    },
-                    autoplay: {
-                        delay: $(".offer__slider").data("autoplay-delay"),
-                        disableOnInteraction: false,
-                    },
-                    pagination: {
-                        el: ".offer__slider .swiper-pagination",
-                        clickable: true,
-                        renderBullet: function (index, className) {
-                            return (
-                                '<span class="' +
-                                className +
-                                '">' +
-                                (index + 1) +
-                                "</span>"
-                            );
-                        },
-                    },
-                    on: {
-                        init() {
-                            initSeparators();
-                            $(".swiper-pagination-separator")
-                                .eq(0)
-                                .addClass("swiper-pagination-separator-active");
-                        },
-                    },
-                });
-                offerSwiper.on("slideChangeTransitionStart", function () {
-                    for (
-                        let i = 0;
-                        i <
-                        $(".offer__pagination .swiper-pagination-bullet")
-                            .length;
-                        i++
-                    ) {
-                        if (
-                            $(".offer__pagination .swiper-pagination-bullet")
-                                .eq(i)
-                                .hasClass("swiper-pagination-bullet-active")
-                        ) {
-                            $(".swiper-pagination-separator").removeClass(
-                                "swiper-pagination-separator-active"
-                            );
-                            $(".swiper-pagination-separator")
-                                .eq(i)
-                                .addClass("swiper-pagination-separator-active");
-                        }
-                    }
-                });
-            }, 3600);
-            setTimeout(function () {
-                $("html, body").css("overflow", "auto");
-            }, 3900);
+            });
+            // }, 3600);
+            // setTimeout(function () {
+            $("html, body").css("overflow", "visible");
+            // }, 3900);
         });
     } else {
         $(".preloader").css("display", "none");
-        $("html, body").css("overflow", "auto");
+        $("html, body").css("overflow", "visible");
     }
 
     //NOTE - Функционал работы аккордеонов
@@ -230,9 +230,27 @@ $(document).ready(function () {
         $(this).css("transition-delay", (totalNavItems - index) * 0.05 + "s");
     });
     
+    if (!$(".full-screen").length) {
+        $(".header").addClass("scrolled");
+    }
+    
+    if ($(window).scrollTop() > 50) {
+        $(".header").addClass("scrolled");
+    }
+    $(window).scroll(function () {
+        if (!$(".full-screen").length) {
+            return;
+        }
+        if ($(this).scrollTop() > 50) {
+            $(".header").addClass("scrolled");
+        } else {
+            $(".header").removeClass("scrolled");
+        }
+    });
+    
     const teamSwiper = new Swiper(".team__slider", {
         loop: true,
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 20,
         simulateTouch: false,
         // If we need pagination
@@ -245,11 +263,19 @@ $(document).ready(function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            473: {
+                slidesPerView: 4,
+            },
+        },
     });
     
     const reviewsSwiper = new Swiper(".reviews__slider", {
         loop: true,
-        slidesPerView: 5,
+        slidesPerView: 1,
         spaceBetween: 20,
         simulateTouch: false,
         // If we need pagination
@@ -261,6 +287,14 @@ $(document).ready(function () {
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            473: {
+                slidesPerView: 5,
+            },
         },
     });
     
@@ -279,17 +313,25 @@ $(document).ready(function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            521: {
+                slidesPerView: 5,
+            },
+        },
     });
     
     $(".float__burger").click(function () {
-        $(this).toggleClass("active");
+        $(".float__burger").toggleClass("active");
     
-        if ($(this).hasClass("active")) {
+        if ($(".float__burger").hasClass("active")) {
             $(".header__menu").animate(
                 {
                     left: "0",
                 },
-                "slow",
+                300,
                 function () {
                     $(".header__menu").css("dispaly", "block");
                     $("html, body").css("overflow", "hidden");
@@ -301,7 +343,7 @@ $(document).ready(function () {
                 {
                     left: "-200%",
                 },
-                "slow",
+                300,
                 function () {
                     $(".header__menu").css("dispaly", "none");
                     $("html, body").css("overflow", "auto");
@@ -317,10 +359,7 @@ $(document).ready(function () {
     $(
         ".swiper-button-prev, .swiper-button-next, .swiper-pagination-bullet"
     ).click(function () {
-        $(this).closest(".swiper").addClass("hidden");
-    });
-    $(".swiper").on("mousedown", "*", function () {
-        console.log("first");
+        $(this).closest(".swiper:not(.about__slider)").addClass("hidden");
     });
 
     //NOTE - Добавление сепараторов между ссылками в хлебных крошках
@@ -332,15 +371,28 @@ $(document).ready(function () {
 
     //NOTE - Фиксирование офферной картинки в зависимости от ширины
 
-    if ($(".offer__image img").width() > 600) {
-        $(".offer__image").css(
-            "right",
-            "-" +
-                (document.body.clientWidth - $(".container").width()) / 2 +
-                "px"
-        );
-        $(".offer__content").width(550);
-    }
+    let positioningBigOfferImage = () => {
+        $(".offer__image img").each(function () {
+            if ($(this).width() > 600) {
+                document.documentElement.style.setProperty(
+                    "--offer-image-offset",
+                    document.body.clientWidth -
+                        $(this).width() -
+                        (document.body.clientWidth - $(".container").width()) /
+                            2 +
+                        "px"
+                );
+                $(this).addClass("big");
+                $(this)
+                    .closest(".offer__wrapper")
+                    .find(".offer__content")
+                    .addClass("big");
+            }
+        });
+    };
+    positioningBigOfferImage();
+
+    $(window).on("resize", positioningBigOfferImage);
 
     //NOTE - Функционал кнопки слайда на следующий блок
 
@@ -494,9 +546,14 @@ $(document).ready(function () {
         html = `<nav><h3>Содержание:</h3>${html}</nav>`;
         // вставим оглавление в тег <aside>
         document.querySelector("aside").insertAdjacentHTML("afterbegin", html);
+        document
+            .querySelector(".post-nav__mobile")
+            .insertAdjacentHTML("afterbegin", html);
     }
 
-    $(".post-content__aside nav a").click(function (event) {
+    $(".post-content__aside nav a, .post-nav__mobile nav a").click(function (
+        event
+    ) {
         event.preventDefault();
         let target = $($(this).attr("href"));
         if (target.length) {
@@ -540,15 +597,25 @@ $(document).ready(function () {
 
     //NOTE - Слайдер на странице адвоката в блоке "Документация"
 
-    let docsSliderWidth =
-        $(".docs__slide-width").width() *
-            $(".docs__slider").data("slides-per-view") +
-        20 * ($(".docs__slider").data("slides-per-view") - 1);
-    $(".docs__slider").width(docsSliderWidth);
+    let adaptingDocsSliderWidth = () => {
+        let docsSliderWidth;
+        if ($(window).width() > 600) {
+            docsSliderWidth =
+                $(".docs__slide-width").width() *
+                    $(".docs__slider").data("slides-per-view") +
+                20 * ($(".docs__slider").data("slides-per-view") - 1);
+        } else {
+            docsSliderWidth = "100%";
+        }
+        $(".docs__slider").width(docsSliderWidth);
+    };
+
+    adaptingDocsSliderWidth();
+
+    $(window).resize(adaptingDocsSliderWidth);
 
     const docsSlider = new Swiper(".docs__slider", {
         loop: true,
-        slidesPerView: $(".docs__slider").data("slides-per-view"),
         spaceBetween: 20,
         simulateTouch: false,
         // If we need pagination
@@ -560,6 +627,14 @@ $(document).ready(function () {
         navigation: {
             nextEl: ".docs__slider .swiper-button-next",
             prevEl: ".docs__slider .swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            601: {
+                slidesPerView: $(".docs__slider").data("slides-per-view"),
+            },
         },
     });
 
