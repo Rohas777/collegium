@@ -9,9 +9,9 @@ $(document).ready(function () {
         }, 500);
         return false;
     });
-    $(window).on("load", function () {
-        $(".cover-screen").slideUp(500);
-    });
+    // $(window).on("load", function () {
+    $(".cover-screen").slideUp(500);
+    // });
     if (
         window.location.pathname === "/" ||
         window.location.pathname === "/index.html"
